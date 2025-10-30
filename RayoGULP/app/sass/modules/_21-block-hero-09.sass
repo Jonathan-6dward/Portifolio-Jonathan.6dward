@@ -1,0 +1,152 @@
+.mxd-hero-09
+  position: relative
+  width: 100%
+  padding-top: 11rem
+  +MQ(M)
+    padding-top: 14.8rem
+  +MQ(XL)
+    padding-top: 0
+
+.mxd-hero-09__wrap
+  position: relative
+  width: 100%
+  padding-top: 9.6rem
+  // background-color: green
+  overflow: hidden
+  +MQ(M)
+    padding-top: 9.6rem
+  +MQ(XL)
+    padding-top: 0
+    height: 100vh
+
+.mxd-hero-09__headline,
+.mxd-hero-09__objects
+  position: relative
+  padding: 0 3rem
+  +MQ(M)
+    padding: 0 6rem
+  +MQ(XXXL)
+    padding: 0 9rem
+
+.mxd-hero-09__headline
+  position: relative
+  +MQ(XL)
+    +position(absolute, null null 4rem 0)
+    width: 100%
+    z-index: 2
+
+.hero-09-headline__caption
+  margin-bottom: 3.6rem
+  p
+    font: normal var(--fw-medium) 2rem/1.2 var(--_font-accent)
+    color: var(--t-bright)
+  +MQ(M)
+    max-width: 500px
+    margin-bottom: 5.4rem
+    p
+      font-size: 2.6rem
+  +MQ(XL)
+    max-width: 440px
+
+.hero-09-headline__title
+  position: relative
+  // background-color: pink
+  overflow: hidden
+  color: var(--t-bright)
+  svg
+    fill: currentColor
+
+.hero-09-svg-mobile
+  display: block
+  +MQ(XL)
+    display: none
+
+.hero-09-svg-desktop
+  display: none
+  +MQ(XL)
+    display: block
+
+.hero-09-headline__hidden
+  +position(absolute, 0 null null 0)
+  white-space: nowrap
+  opacity: 0
+  visibility: hidden
+
+.hero-09-headline__tags
+  display: flex
+  justify-content: flex-start
+  flex-wrap: wrap
+  gap: 1rem
+  margin-top: 6rem
+  max-width: 800px
+  +MQ(XXXL)
+    max-width: 1000px
+
+.mxd-hero-09__objects
+  position: relative
+  display: flex
+  flex-direction: column
+  gap: 1.5rem
+  +MQ(M)
+    gap: 0
+    max-width: 430px
+    margin: 6rem auto 0
+    padding: 0
+    // background-color: pink
+  +MQ(XL)
+    position: absolute
+    right: 14%
+    top: 6.8rem
+    margin: 0
+    z-index: 1
+
+.hero-09-objects__image
+  position: relative
+  max-width: 325px
+  margin: 6rem auto 0
+  padding-bottom: 4.5rem
+  +MQ(M)
+    max-width: none
+    margin: 0
+    padding-bottom: 0
+
+.hero-09-objects__item
+  position: relative
+  padding: 1.8rem 2rem
+  border-radius: var(--_radius-pt-m)
+  background-color: var(--base-tint)
+  +MQ(M)
+    position: absolute
+    background-color: var(--neutral-transparent)
+    border: 1px solid var(--neutral-transparent)
+    backdrop-filter: blur(16px)
+    box-shadow: 0px 4px 8px 0px rgba(var(--pt-purple-rgb), 0.3)
+    &.item-01
+      top: 7rem
+      right: -3rem
+    &.item-02
+      left: -14rem
+      top: 18rem
+    &.item-03
+      right: -18rem
+      top: 24rem
+  +MQ(XXXL)
+    &.item-01
+      top: 8rem
+      right: -3rem
+    &.item-02
+      left: -14rem
+      top: 29rem
+    &.item-03
+      right: -18rem
+      top: 27rem
+
+.mxd-hero-09__more
+  display: none
+  +MQ(XL)
+    display: block
+    +position(absolute, null 0 0 null)
+    padding: 4rem 6rem
+    z-index: 3
+  +MQ(XXXL)
+    padding: 4rem 9rem

@@ -1,0 +1,144 @@
+.page-padding
+  width: 100%
+  padding: 0
+  +MQ(XL)
+    padding: 6rem 0
+  +MQ(XXXL)
+    padding: 9rem 0
+
+.mxd-pinned
+  display: block
+  +MQ(XL)
+    display: flex
+    gap: 3rem
+
+.mxd-pinned__visual
+  display: none
+  +MQ(XL)
+    position: sticky
+    top: 0
+    display: flex
+    align-items: center
+    justify-content: center
+    height: 100vh
+
+.mxd-pinned__img-wrap
+  width: 30em
+  height: 40em
+  max-height: 100%
+  max-width: 100%
+  background-color: var(--base-tint)
+  border-radius: var(--_radius-l)
+  +MQ(XL)
+    width: 100%
+    height: 100%
+
+.mxd-pinned__img-list
+  position: relative
+  width: 100%
+  height: 100%
+
+.mxd-pinned__img-item
+  +position(absolute, 0 0 0 0)
+  width: 100%
+  height: 100%
+  display: flex
+  align-items: center
+  justify-content: center
+  opacity: 0
+  transition: opacity var(--_animspeed-medium)
+  &.is-active
+    opacity: 1
+
+.mxd-pinned__img
+  width: auto
+  height: 30rem
+  object-fit: cover
+  border-radius: 2em
+  +MQ(XXXL)
+    height: 40rem
+
+.mxd-pinned__content
+  padding: 0
+  +MQ(XL)
+    padding: 6rem 0
+  +MQ(XXXL)
+    padding: 9rem 0
+
+.mxd-pinned__text-wrap
+  padding: 0
+  +MQ(XL)
+    padding: 0 9rem 0 3rem
+  +MQ(XXXL)
+    padding: 0 9rem 0 6rem
+
+.mxd-pinned__text-list
+  display: flex
+  flex-direction: column
+  gap: 7rem
+  +MQ(M)
+    gap: 8rem
+  +MQ(XL)
+    gap: 0
+
+.mxd-pinned__text-item
+  display: flex
+  flex-direction: column
+  justify-content: flex-start
+  align-items: flex-start
+  +MQ(XL)
+    height: calc( 100vh - 12rem )
+    max-width: 640px
+    justify-content: center
+    opacity: 0.2
+    transition: opacity var(--_animspeed-medium)
+    &.is-active
+      opacity: 1
+  +MQ(XXXL)
+    height: calc( 100vh - 18rem )
+
+.mxd-pinned__img-mobile
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 100%
+  height: 460px
+  background-color: var(--base-tint)
+  border-radius: var(--_radius-l)
+  margin-bottom: 2.4rem
+  img
+    display: block
+    width: auto
+    height: 24rem
+    object-fit: cover
+    border-radius: 2em
+  +MQ(M)
+    height: 600px
+    img
+      height: 30rem
+  +MQ(XL)
+    display: none
+
+.mxd-pinned__title
+  margin-bottom: 3.4rem
+  &.centered-mobile
+    text-align: center
+  +MQ(XL)
+    &.centered-mobile
+      text-align: left
+  +MQ(XXXL)
+    margin-bottom: 4rem
+
+.mxd-pinned__tags
+  display: flex
+  flex-wrap: wrap
+  gap: 1rem
+  margin-bottom: 3.2rem
+  &.centered-mobile
+    justify-content: center
+  +MQ(XL)
+    &.centered-mobile
+      justify-content: flex-start
+  +MQ(XXXL)
+    gap: 1.4rem
+    margin-bottom: 3.8rem

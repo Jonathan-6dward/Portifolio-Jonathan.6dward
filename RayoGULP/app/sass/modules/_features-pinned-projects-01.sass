@@ -1,0 +1,38 @@
+.mxd-pinned-projects
+  position: relative
+
+.mxd-pinned-projects__static
+  //position: relative
+
+.mxd-pinned-projects__static-inner
+  text-align: center
+  +MQ(XL)
+    position: sticky
+    top: 0
+    padding-top: 6rem
+    text-align: left
+  +MQ(XXXL)
+    padding-top: 9rem
+
+.mxd-pinned-projects__scroll
+  +MQ(XL)
+    padding-top: 6rem
+    grid-column-gap: 1.2rem
+    grid-row-gap: 1.2rem
+    flex-flow: column
+    justify-content: flex-start
+    align-items: stretch
+    display: flex
+  +MQ(XXXL)
+    padding-top: 9rem
+
+.mxd-pinned-projects__scroll-inner
+  display: flex
+  flex-direction: column
+  gap: 6.2rem
+  +MQ(M)
+    gap: 7rem
+  +MQ(XL)
+    gap: 9rem
+  +MQ(XXXL)
+    gap: 11rem

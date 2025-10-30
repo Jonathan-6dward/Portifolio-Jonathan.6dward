@@ -1,0 +1,75 @@
+.mxd-stats-simple
+  position: relative
+
+.mxd-stats-simple
+  +MQ(XL)
+    @media (hover) and (prefers-reduced-motion: no-preference)
+      & > .mxd-stats-simple__item
+        transition: opacity .3s ease
+      &:hover > .mxd-stats-simple__item:not(:hover)
+        opacity: .2
+
+.mxd-stats-simple__item
+  position: relative
+  padding-top: 3rem
+  &:first-of-type
+    padding-top: 0
+    .mxd-stats-simple__inner
+      padding-top: 6rem
+      border-top: 1px solid var(--st-bright)
+  .mxd-stats-simple__inner
+    padding-bottom: 6rem
+    border-bottom: 1px solid var(--st-bright)
+  +MQ(L)
+    padding-top: 0
+    .mxd-stats-simple__inner
+      padding-bottom: 0
+      border-bottom: none
+    &:first-of-type
+      .mxd-stats-simple__inner
+        padding-top: 0
+        border-top: none
+  .no-touch &:hover
+    .mxd-stats-simple__image
+      opacity: 1
+      transform: scale(1)
+
+.mxd-stats-simple__inner
+  flex: 1
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  align-items: center
+  +MQ(L)
+    align-items: flex-start
+    height: 320px
+    padding: 0 3rem
+    border-bottom: none
+    border-left: 1px solid var(--st-bright)
+  +MQ(XXXL)
+    height: 400px
+
+.mxd-stats-simple__image
+  display: inline-flex
+  height: 5.4rem
+  width: auto
+  object-fit: contain
+  margin-bottom: 2rem
+  +MQ(L)
+    margin-bottom: 0
+  +MQ(XL)
+    opacity: 0
+    transform: scale(0)
+    transition: all var(--_animspeed-medium) var(--_animbezier)
+  +MQ(XXXL)
+    height: 7rem
+
+.mxd-stats-simple__counter
+  margin-bottom: 2.8rem
+  +MQ(L)
+    margin-bottom: 0
+
+.mxd-stats-simple__descr
+  text-align: center
+  +MQ(L)
+    text-align: left

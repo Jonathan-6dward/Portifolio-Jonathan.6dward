@@ -1,0 +1,89 @@
+.mxd-blog-preview
+  position: relative
+
+.mxd-blog-preview__item
+  display: flex
+  flex-direction: column
+  padding-bottom: 3.2rem
+  &:last-of-type
+    padding-bottom: 0
+  +MQ(M)
+    padding-bottom: 4.2rem
+  +MQ(XL)
+    padding-bottom: 0
+
+.mxd-blog-preview__media
+  display: block
+  position: relative
+  height: 460px
+  border-radius: var(--_radius-l)
+  margin-bottom: 1.5rem
+  overflow: hidden
+  .no-touch &:hover
+    .mxd-preview-hover
+      opacity: 1
+      backdrop-filter: blur(6px)
+  +MQ(M)
+    height: 600px
+    margin-bottom: 2.4rem
+  +MQ(XL)
+    height: 460px
+  +MQ(XXXL)
+    height: 600px
+
+.mxd-blog-preview__image
+  position: relative
+  width: 100%
+  height: 460px
+  border-radius: var(--_radius-l)
+  overflow: hidden
+  display: flex
+  flex-direction: column
+  justify-content: flex-end
+  background-repeat: no-repeat
+  background-position: center
+  background-size: cover
+  img
+    display: block
+    width: 100%
+    height: 100%
+    object-fit: cover
+  +MQ(M)
+    height: 600px
+  +MQ(XL)
+    height: 460px
+  +MQ(XXXL)
+    height: 600px
+
+.mxd-blog-preview__tags
+  +position(absolute, null null 0 0)
+  width: 100%
+  padding: 2.6rem 3rem
+  display: flex
+  flex-wrap: wrap
+  gap: 1rem
+  transition: all var(--_animspeed-medium) var(--_animbezier)
+  +MQ(M)
+    padding: 3.6rem 4rem
+  +MQ(XXXL)
+    gap: 1.4rem
+
+.mxd-blog-preview__data
+  padding: 0 3rem
+  a
+    display: inline
+    font: normal var(--fw-regular) 2.2rem/1.2 var(--_font-accent)
+    line-height: 1.2
+    color: var(--t-medium)
+    +text-link-transparent-bright
+    span
+      font-weight: var(--fw-medium)
+      line-height: 1.2
+      color: var(--t-bright)
+  p
+    font: normal var(--fw-regular) 2.2rem/1.2 var(--_font-accent)
+  +MQ(M)
+    padding: 0 4rem
+  +MQ(XXXL)
+    p, a
+      font-size: 3rem

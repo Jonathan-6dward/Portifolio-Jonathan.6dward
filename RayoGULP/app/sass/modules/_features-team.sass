@@ -1,0 +1,134 @@
+.mxd-team-cards
+  position: relative
+
+.mxd-team-cards__item
+  display: flex
+  flex-direction: column
+  padding-bottom: 3.5rem
+  &:last-of-type
+    padding-bottom: 0
+    &.padding-bottom-mobile
+      padding-bottom: 3.5rem
+  &.no-padding-bottom
+    padding-bottom: 0
+  +MQ(M)
+    padding-bottom: 0
+    
+  +MQ(XL)
+    padding-bottom: 0
+    &:last-of-type
+      padding-bottom: 0
+      &.padding-bottom-mobile
+        padding-bottom: 0
+    &.padding-bottom-desktop
+      padding-bottom: 3.5rem
+
+.mxd-team-cards__h2-block
+  position: relative
+  &.right-block
+    padding-left: 0
+  &.left-block
+    padding-right: 0
+  +MQ(XL)
+    &.right-block
+      padding-left: 3rem
+    &.left-block
+      padding-right: 3rem
+
+.mxd-team-cards__media
+  position: relative
+  height: 460px
+  border-radius: var(--_radius-m)
+  margin-bottom: 1.7rem
+  //background-color: pink
+  overflow: hidden
+  &.no-margin
+    margin-bottom: 0
+  &.overflow-visible
+    overflow: visible
+  +MQ(M)
+    height: 460px
+  +MQ(XL)
+    height: 460px
+  +MQ(XXXL)
+    height: 600px
+
+.mxd-team-cards__career
+  position: relative
+  display: block
+  width: 100%
+  height: 100%
+  border-radius: var(--_radius-m)
+  &::before
+    content: ""
+    display: block
+    +position(absolute, 0 null null 0)
+    width: 100%
+    height: 100%
+    background-color: var(--base-tint)
+    border-radius: var(--_radius-m)
+    z-index: -1
+    transform: scale(1)
+    transition: transform var(--_animspeed-slow), box-shadow var(--_animspeed-slow) var(--_animbezier)
+  .no-touch &:hover
+    &::before
+      transform: scale(1.04)
+      +shadow(4)
+
+.career__image
+  position: absolute
+  +center
+  width: 256px
+  height: auto
+  padding-bottom: 4rem
+
+.career__caption
+  +position(absolute, null null 0 0)
+  width: 100%
+  padding: 1.6rem
+  display: flex
+  flex-direction: column
+  text-align: center
+  +MQ(M)
+    padding: 2.6rem
+
+.mxd-team-cards__photo
+  position: relative
+  width: 100%
+  height: 460px
+  overflow: hidden
+  display: flex
+  flex-direction: column
+  justify-content: flex-end
+  background-repeat: no-repeat
+  background-position: center
+  background-size: cover
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+  +MQ(M)
+    height: 460px
+  +MQ(XL)
+    height: 460px
+  +MQ(XXXL)
+    height: 600px
+
+.mxd-team-cards__socials
+  +position(absolute, null null 0 0)
+  width: 100%
+  padding: 1.6rem
+  display: flex
+  flex-wrap: wrap
+  gap: 1rem
+  +MQ(M)
+    padding: 2.6rem
+
+.mxd-team-cards__info
+  padding: 0 1.6rem
+  +MQ(M)
+    padding: 0 2.6rem
+
+.mxd-team-cards__name
+
+.mxd-team-cards__position

@@ -1,0 +1,292 @@
+.stack-wrapper
+  position: relative
+  width: 100%
+  &.in-content-stack
+    margin-top: -7.6rem
+  &.mxd-hero-02-stack
+    margin-top: -10.6rem
+  +MQ(M)
+    &.mxd-hero-02-stack
+      margin-top: -13.6rem
+  +MQ(XL)
+    &.mxd-hero-08-stack
+      margin-top: -1.6rem
+  +MQ(XXXL)
+    &.in-content-stack
+      margin-top: -4.6rem
+    &.mxd-hero-02-stack
+      margin-top: -13.6rem
+    &.mxd-hero-08-stack
+      margin-top: 2.3rem
+
+.stack-offset
+  display: flex
+  width: 100%
+  height: 10.6rem
+  background-color: transparent
+  +MQ(M)
+    height: 13.6rem
+
+.services-stack
+  width: 100%
+  position: relative
+  height: 75vh
+  min-height: 600px
+  +MQ(L)
+    height: 600px
+    min-height: 0
+  +MQ(XXXL)
+    height: 760px
+
+.stack-item
+  display: flex
+  position: absolute
+  width: 100%
+  height: 100%
+  padding-bottom: 3rem
+  +MQ(XXXL)
+    padding-bottom: 6rem
+
+.mxd-services-stack__inner
+  position: relative
+  display: flex
+  flex-direction: column
+  overflow: hidden
+  width: 100%
+  height: 100%
+  padding: 2.6rem 3rem 0 3rem
+  z-index: 0
+  border-radius: var(--_radius-l)
+  &.radius-dark
+    border-radius: 3.6rem
+  &.showcase-inner
+    padding: 2.6rem 3rem 3rem 3rem
+  +MQ(M)
+    padding: 4.2rem 5rem 0 5rem
+    &.showcase-inner
+      padding: 4.2rem 5rem 5rem 5rem
+    &.radius-dark
+      border-radius: 4.6rem
+  +MQ(L)
+    padding: 4.2rem 5rem 4.6rem 5rem
+    &.justify-end
+      justify-content: flex-end
+    &.justify-between
+      justify-content: space-between
+
+.mxd-services-stack__container
+  position: relative
+  width: 100%
+  height: 100%
+  display: flex
+  flex-direction: column
+  overflow: hidden
+
+.mxd-services-stack__controls
+  +position(absolute, 1rem 1rem null null)
+  z-index: 1
+
+.mxd-services-stack__title
+  margin-bottom: 3.4rem
+  padding-right: 2.6rem
+  &.showcase-title
+    display: flex
+    flex-direction: column-reverse
+    gap: 0
+    width: 100%
+    padding-right: 0
+    margin-bottom: 1.8rem
+  +MQ(M)
+    &.showcase-title
+      flex-direction: row
+      justify-content: space-between
+      gap: 3rem
+      margin-bottom: 2.2rem
+  +MQ(L)
+    z-index: 1
+    &.width-60
+      width: 60%
+      max-width: 580px
+    &.width-70
+      width: 70%
+  +MQ(XL)
+    h3
+      font-size: 7rem
+  +MQ(XXL)
+    &.showcase-title
+      margin-bottom: 2.8rem
+  +MQ(XXXL)
+    margin-bottom: 4rem
+    &.width-60
+      max-width: 800px
+    &.width-70
+    &.showcase-title
+      margin-bottom: 3rem
+
+.mxd-services-stack__number
+  font: normal var(--fw-medium) 3.6rem/1.2 var(--_font-accent)
+  &.t-muted
+    color: var(--t-muted)
+  &.t-muted-extra
+    color: var(--t-muted-extra)
+  &.t-opp-brigth
+    color: var(--t-opp-bright)
+  &.t-opp-muted
+    color: var(--t-opp-muted)
+  +MQ(M)
+    font-size: 5rem
+  +MQ(XL)
+    font-size: 7rem
+
+.mxd-services-stack__info
+  z-index: 1
+  margin-bottom: 3.3rem
+  &.showcase-info
+    width: 100%
+    margin-bottom: 2.7rem
+  +MQ(M)
+    width: 80%
+    margin-bottom: 3.3rem
+    &.showcase-info
+      margin-bottom: 3.4rem
+  +MQ(L)
+    &.width-60
+      width: 60%
+      max-width: 470px
+      margin-bottom: 0
+    &.width-70
+      width: 70%
+      max-width: 300px
+    &.showcase-info
+      width: 50%
+      padding-right: 1.5rem
+  +MQ(XXL)
+    &.showcase-info
+      margin-bottom: 4.4rem
+  +MQ(XXXL)
+    &.width-60
+      max-width: 610px
+    &.width-70
+      max-width: 490px
+    &.showcase-info
+      margin-bottom: 5rem
+
+.mxd-services-stack__works
+  position: relative
+  display: flex
+  flex-direction: column
+  flex: 1
+  gap: 1.5rem
+  +MQ(M)
+    flex-direction: row
+    gap: 3rem
+
+.mxd-services-stack__work
+  position: relative
+  width: 100%
+  height: 100%
+  overflow: hidden
+  border-radius: var(--_radius-m)
+  +MQ(M)
+    width: calc( 50% - 1.5rem )
+  .no-touch &:hover
+    .mxd-services-stack__preview
+      filter: blur(10px)
+      transform: scale(1.04)
+    .mxd-preview-hover
+      opacity: 1
+      filter: blur(0)
+
+.mxd-services-stack__preview
+  +position(absolute, 0 null null 0)
+  min-width: 100%
+  min-height: 100%
+  object-fit: cover
+  transition: all var(--_animspeed-medium) var(--_animbezier)
+
+.mxd-services-stack__tags
+  display: none
+  +MQ(M)
+    display: flex
+    flex-wrap: wrap
+    gap: 1rem
+    &.tags-absolute
+      +position(absolute, null null 0 0)
+      width: 100%
+      padding: 2.6rem 3rem
+      transition: all var(--_animspeed-medium) var(--_animbezier)
+  +MQ(XL)
+    &.tags-absolute
+      padding: 3.6rem 4rem
+  +MQ(XXXL)
+    gap: 1.4rem
+
+.services-stack__image
+  position: relative
+  overflow: hidden
+  .service-img
+  .service-img-m
+    display: none
+  +MQ(L)
+    +position(absolute, 0 0 null null)
+    width: 100%
+    height: 100%
+    z-index: 0
+    padding-left: 0
+    .service-img
+      +position(absolute, null -15% 0 null)
+      height: 100%
+      width: auto
+    .service-img-s
+      display: none
+    .service-img-m
+      display: block
+  +MQ(XL)
+    .service-img
+      +position(absolute, null 0 -5% null)
+      max-height: none
+      height: 110%
+      width: auto
+
+.portfolio-stack__inner
+  position: relative
+  display: flex
+  flex-direction: column
+  width: 100%
+  height: 100%
+  background-color: var(--base)
+  border-radius: var(--_radius-l)
+  overflow: hidden
+  cursor: pointer
+  background-repeat: no-repeat
+  background-position: center center
+  background-size: cover
+
+.portfolio-stack__descr
+  display: none
+  +position(absolute, null null 0 0)
+  width: 100%
+  padding: 2.4rem 3rem
+  +MQ(M)
+    display: block
+    width: 60%
+    padding: 2.6rem 3rem
+  +MQ(XL)
+    width: 40%
+    padding: 4rem 5rem 4.6rem 5rem
+  +MQ(XXXL)
+    width: 33.3334%
+
+.portfolio-stack__title
+  &.dark
+    font-weight: 400
+  &.light
+    font-weight: 300
+
+.portfolio-stack__text
+  margin-top: 3rem
+  font-weight: 300
+  &.dark
+    font-weight: 400
+  +MQ(XXL)
+    margin-top: 4rem

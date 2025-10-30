@@ -1,0 +1,67 @@
+.mxd-services-list
+  position: relative
+  display: flex
+  flex-direction: column
+  &.grid-top
+    padding-top: 14rem
+  +MQ(M)
+    &.grid-top
+      padding-top: 16rem
+  +MQ(XXXL)
+    &.grid-top
+      padding-top: 20rem
+
+.mxd-services-list
+  +MQ(XL)
+    @media (hover) and (prefers-reduced-motion: no-preference)
+      & > .mxd-services-list__item
+        transition: opacity .3s ease
+      &:hover > .mxd-services-list__item:not(:hover)
+        opacity: .2
+
+.mxd-services-list__item
+  position: relative
+  margin-top: -2px
+  &:first-of-type
+    margin-top: 0
+
+.mxd-services-list__border
+  position: relative
+  left: 1.5rem
+  width: calc( 100% - 3rem )
+  height: 2px
+  background-color: var(--st-bright)
+
+.mxd-services-list__inner
+  padding: 6rem 0
+
+.mxd-services-list__title
+  margin-bottom: 3.4rem
+  p
+    font: normal var(--fw-medium) 4.4rem/0.7 var(--_font-accent)
+    letter-spacing: -0.06rem
+    color: var(--t-bright)
+  +MQ(XL)
+    margin-bottom: 0
+    p
+      font-size: 9rem
+  +MQ(XXXL)
+    p
+      font-size: 12rem
+
+.mxd-services-list__descr
+  margin-bottom: 2.6rem
+  p
+    color: var(--t-medium)
+    font-size: 1.8rem
+  +MQ(XL)
+    margin-bottom: 0
+
+.mxd-services-list__tagslist
+  ul
+    li
+      p
+        color: var(--t-medium)
+        font-size: 1.8rem
+  +MQ(XL)
+    padding: 0 3rem

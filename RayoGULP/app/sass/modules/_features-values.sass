@@ -1,0 +1,58 @@
+.mxd-values
+  position: relative
+
+.mxd-values__item
+  display: flex
+  flex-direction: column
+  &.mobile-reverse
+    flex-direction: column-reverse
+  +MQ(XL)
+    &.mobile-reverse
+      flex-direction: column
+
+.mxd-values__lists
+  padding: 6rem 3rem 0 3rem
+  +MQ(M)
+    padding: 6.4rem 4rem 0 4rem
+  +MQ(XL)
+    //background-color: pink
+    padding: 0
+
+.mxd-values__lists-item
+  margin-bottom: 2.6rem
+  &:last-of-type
+    margin-bottom: 0
+  +MQ(S)
+    margin-bottom: 0
+
+.mxd-values__image
+  position: relative
+  height: 460px
+  border-radius: var(--_radius-l)
+  background-repeat: no-repeat
+  background-position: center
+  background-size: cover
+  &.image-large-desktop
+  &.image-small-desktop
+  +MQ(M)
+    height: 600px
+  +MQ(XL)
+    &.image-large-desktop
+      height: 930px
+
+.mxd-values__descr
+  padding: 5.4rem 3rem 5.9rem 3rem
+  &.has-top-list
+    padding: 4.6rem 3rem 5.9rem 3rem
+  +MQ(M)
+    padding: 6.4rem 4rem 6.9rem 4rem
+    &.has-top-list
+      padding: 5.5rem 4rem 6.9rem 4rem
+  +MQ(XL)
+    padding: 6.4rem 4rem 0 4rem
+    &.has-top-list
+      padding: 6.4rem 4rem 0 4rem
+  +MQ(XXXL)
+    padding: 6rem 4rem 0 4rem
+    &.has-top-list
+      padding: 6rem 4rem 0 4rem

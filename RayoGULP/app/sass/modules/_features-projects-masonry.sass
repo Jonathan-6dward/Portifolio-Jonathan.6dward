@@ -1,0 +1,74 @@
+.mxd-projects-masonry
+  position: relative
+
+.mxd-projects-masonry__gallery
+
+.mxd-projects-masonry__title
+  position: relative
+  height: auto
+  padding: 0 1.5rem
+  &.headline-title
+    margin-bottom: 12.9rem
+  &.section-title
+    margin-bottom: 0
+  +MQ(M)
+    &.headline-title
+      margin-bottom: 14.6rem
+  +MQ(XL)
+    padding: 0 3rem
+    &.headline-title
+      margin-bottom: 14.2rem
+    &.section-title
+      margin-bottom: 16rem
+  +MQ(XXL)
+  +MQ(XXXL)
+    padding: 0 3rem
+    &.headline-title
+      margin-bottom: 17.9rem
+    &.section-title
+      margin-bottom: 20rem
+
+.mxd-projects-masonry__item
+  padding: 0 1.5rem
+  margin-bottom: 6.2rem
+  +MQ(M)
+    padding: 0 1.5rem
+    margin-bottom: 7rem
+  +MQ(XL)
+    padding: 0 3rem
+    margin-bottom: 9rem
+    &:last-of-type
+      margin-bottom: 0
+  +MQ(XXXL)
+    padding: 0 4.5rem
+    margin-bottom: 11rem
+
+.mxd-project-item__media
+  &.masonry-media
+    height: auto
+  +MQ(XL)
+    &.masonry-media
+      height: 600px
+  +MQ(XXL)
+    &.masonry-media
+      height: 600px
+  +MQ(XXXL)
+    &.masonry-media
+      height: 800px
+
+.mxd-project-item__preview
+  +MQ(XL)
+    &.masonry-preview
+      height: 600px
+  +MQ(XXL)
+    &.masonry-preview
+      height: 600px
+  +MQ(XXXL)
+    &.masonry-preview
+      height: 800px
+
+.mxd-projects-masonry__btngroup
+  padding: 0 1.5rem
+  +MQ(XL)
+    +position(absolute, null 0 0 null)
+    padding: 0 3rem

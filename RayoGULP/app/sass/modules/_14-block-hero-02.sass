@@ -1,0 +1,234 @@
+.mxd-hero-02
+  position: relative
+
+.hero-02-static__tl-trigger
+  +position(absolute, 14% 0 null null)
+  width: 1px
+  height: 1px
+
+.mxd-hero-02-static__top
+  position: relative
+  padding-top: 7.6rem
+  +MQ(M)
+    padding-top: 9.6rem
+
+.hero-02-static__caption
+  margin-top: 2rem
+  +MQ(M)
+    margin-top: 3rem
+
+.mxd-hero-02-static__bottom
+  +position(absolute, null null 3rem 0)
+  width: 100%
+  +MQ(M)
+    +position(absolute, null null 4rem 0)
+
+.mxd-hero-02-static__btn
+  display: none
+  +MQ(M)
+    display: block
+    +position(absolute, null 6rem 4rem null)
+  +MQ(XXXL)
+    +position(absolute, null 9rem 4rem null)
+
+.mxd-hero-02-static__center
+  position: absolute
+  left: 0
+  +center(y)
+  width: 100%
+  // background-color: pink
+
+.mxd-hero-02-marquee
+  position: relative
+  // background-color: pink
+  color: var(--t-bright)
+  .marquee__item
+    &.item-regular
+      display: flex
+      align-items: center
+      gap: 3rem
+      margin: 0
+  .marquee__text
+    font-size: 10rem
+    font-weight: var(--fw-medium)
+    color: var(--t-bright)
+    margin: 0
+  .marquee__image
+    width: 7.1rem
+    height: 7.1rem
+    svg
+      fill: currentColor
+  +MQ(M)
+    .marquee__item
+      &.item-regular
+        gap: 4rem
+    .marquee__text
+      font-size: 14rem
+    .marquee__image
+      width: 9.1rem
+      height: 9.1rem
+  +MQ(XXXL)
+    .marquee__item
+      &.item-regular
+        gap: 5rem
+    .marquee__text
+      font-size: 18rem
+    .marquee__image
+      width: 12.1rem
+      height: 12.1rem
+      
+.mxd-hero-02-marquee__image
+  position: absolute
+  +center
+  z-index: 2
+  width: 18rem
+  +MQ(M)
+    width: 30rem
+  +MQ(XXXL)
+    width: 42rem
+
+.mxd-hero-02-marquee__line
+  .marquee__toleft
+    display: flex
+    align-items: center
+    gap: 3rem
+  +MQ(M)
+    .marquee__toleft
+      gap: 4rem
+  +MQ(XXXL)
+    .marquee__toleft
+      gap: 5rem
+
+.mxd-hero-02-scroll__wrap
+  padding: 0 3rem
+  padding-bottom: 100vh
+  // background-color: pink
+  +MQ(M)
+    padding: 0 6rem
+    padding-bottom: 100vh
+  +MQ(XL)
+    padding-bottom: 100vh
+  +MQ(XXXL)
+    padding: 0 9rem
+    padding-bottom: 100vh
+
+.mxd-hero-02-scroll__images
+  display: flex
+  flex-direction: column
+  // background-color: green
+  gap: 6rem
+  +MQ(M)
+    gap: 6rem
+  +MQ(XL)
+    gap: 10rem
+  +MQ(XXXL)
+    gap: 14rem
+
+.mxd-hero-02-images__row
+  display: flex
+  justify-content: center
+  align-items: flex-end
+  flex-wrap: wrap
+  gap: 6rem
+  // background-color: red
+  +MQ(M)
+    gap: 6rem
+    justify-content: space-between
+    align-items: flex-end
+  +MQ(XL)
+    flex-wrap: nowrap
+
+.mxd-hero-02-images__row-02,
+.mxd-hero-02-images__row-03
+  align-items: flex-start
+
+.mxd-hero-02-image__landscape,
+.mxd-hero-02-image__portrait
+  position: relative
+  display: block
+
+.mxd-hero-02-image__portrait
+  +MQ(M)
+    &.portrait-01
+      padding-bottom: 9rem
+    &.portrait-02
+      margin-top: -3rem
+    &.portrait-03
+      margin-top: -9rem
+    &.portrait-04
+      padding-top: 3rem
+    &.portrait-05
+      padding-left: 30%
+  +MQ(XL)
+    &.portrait-01
+      padding-bottom: 9rem
+    &.portrait-02
+      margin-top: 0
+      padding-top: 8rem
+      padding-bottom: 3rem
+    &.portrait-03
+      margin-top: 0
+    &.portrait-04
+      padding-top: 0
+      margin-top: -10rem
+    &.portrait-05
+      padding-left: 0
+
+.mxd-hero-02-image__landscape
+  +MQ(M)
+    &.landscape-02
+      padding-top: 100px
+    &.landscape-03
+      padding-top: 0
+  +MQ(XL)
+    &.landscape-02
+      padding-top: 100px
+    &.landscape-03
+      padding-top: 60px
+
+.mxd-hero-02-image__inner
+  position: relative
+  border-radius: var(--_radius-m)
+  box-shadow: 0 29px 58px rgba(0,0,0,0.30), 0 25px 22px rgba(0,0,0,0.22)
+  overflow: hidden
+  .no-touch &:hover
+    .mxd-preview-hover
+      opacity: 1
+      filter: blur(0)
+      backdrop-filter: blur(10px)
+  &.type-01,
+  &.type-02
+    width: 220px
+    height: 266px
+  &.type-03
+    width: 300px
+    height: 200px
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+  +MQ(M)
+    &.type-03
+      width: 360px
+      height: 237px
+  +MQ(XL)
+    &.type-01
+      width: 280px
+      height: 340px
+    &.type-02
+      width: 500px
+      height: 640px
+    &.type-03
+      width: 440px
+      height: 290px
+  +MQ(XXXL)
+    &.type-01
+      width: 400px
+      height: 480px
+    &.type-02
+      width: 760px
+      height: 940px
+    &.type-03
+      width: 620px
+      height: 420px
+

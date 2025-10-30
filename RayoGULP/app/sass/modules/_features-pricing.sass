@@ -1,0 +1,116 @@
+.mxd-pricing-table
+  position: relative
+
+.mxd-pricing-table__item
+  position: relative
+
+.mxd-pricing-table__inner
+  position: relative
+  display: flex
+  flex-direction: column
+  gap: 3rem
+  width: 100%
+  background-color: var(--base-tint)
+  border-radius: var(--_radius-m)
+  padding: 3rem
+  transition: box-shadow var(--_animspeed-slow) var(--_animbezier)
+  .no-touch &:hover
+    +shadow(4)
+  +MQ(XL)
+    height: 100%
+    padding: 4rem
+  +MQ(XXXL)
+    padding: 5rem
+
+.mxd-pricing-table__tag
+  +position(absolute, -1.6rem null null 3rem)
+  +MQ(XL)
+    left: 4rem
+  +MQ(XXXL)
+    left: 5rem
+
+.mxd-pricing-table__data
+  position: relative
+  display: flex
+  flex: 1
+  flex-direction: column
+  gap: 3rem
+  +MQ(XL)
+    justify-content: space-between
+
+.pricing-data__header
+  display: flex
+  flex-direction: column
+
+.pricing-header__title
+  margin-bottom: 1rem
+
+.pricing-header__descr
+  font-size: 1.8rem
+  +MQ(XXXL)
+    font-size: 1.8rem
+
+.pricing-data__info
+  position: relative
+  display: flex
+  flex-direction: column
+  gap: 3rem
+
+.pricing-data__price
+  display: flex
+  flex-direction: column
+  gap: 0.6rem
+  margin-bottom: 1.2rem
+
+.pricing-data__num
+  display: flex
+  align-items: flex-end
+  gap: 0.4rem
+
+.pricing-data__currency,
+.pricing-data__period
+  font: normal var(--fw-regular) 1.8rem/1.6 var(--_font-accent)
+  color: var(--t-muted)
+  +MQ(XXXL)
+    font-size: 2.2rem
+
+.pricing-data__amount
+  font: normal var(--fw-semibold) 7.4rem/0.9 var(--_font-accent)
+  letter-spacing: -0.2rem
+  color: var(--t-bright)
+
+.pricing-data__btnholder
+  display: flex
+  flex-direction: column
+  gap: 1rem
+  width: 100%
+  margin-bottom: 1.8rem
+
+.pricing-data__divider
+  width: 100%
+  height: 0.2rem
+  border-radius: 0.2rem
+  background-color: var(--base-opp)
+
+.mxd-pricing-table__plan
+  display: flex
+  flex-direction: column
+  gap: 0.4rem
+  width: 100%
+  margin-top: 0.7rem
+
+.pricing-plan__caption
+  font-size: 1.8rem
+  +MQ(XXXL)
+    font-size: 1.8rem
+
+.pricing-plan__list
+
+.mxd-pricing-table__link
+  display: flex
+  gap: 1rem
+  width: 100%
+  a
+    font: normal var(--fw-regular) 1.8rem/1.2 var(--_font-accent)
+    color: var(--t-bright)
+    +text-link-bright

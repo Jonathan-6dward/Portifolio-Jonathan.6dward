@@ -1,0 +1,101 @@
+.mxd-services-cards-s
+  position: relative
+
+.mxd-services-cards-s__item
+  position: relative
+  height: auto
+  //height: 540px
+  +MQ(M)
+    height: 420px
+  +MQ(XXXL)
+    height: 600px
+
+.mxd-services-cards-s__inner
+  display: flex
+  flex-direction: column
+  justify-content: flex-start
+  position: relative
+  width: 100%
+  height: 100%
+  overflow: hidden
+  +MQ(XL)
+    &.justify-end
+      justify-content: flex-end
+    &.justify-between
+      justify-content: space-between
+
+.mxd-services-cards-s__title
+  margin-bottom: 2.8rem
+  h3
+    font-size: 3.6rem
+  +MQ(L)
+    width: 50%
+  +MQ(XL)
+    width: 100%
+    z-index: 1
+    h3
+      font-size: 4rem
+  +MQ(XXXL)
+    h3
+      font-size: 5rem
+
+.mxd-services-cards-s__info
+  +MQ(L)
+    width: 50%
+  +MQ(XL)
+    width: 100%
+    z-index: 1
+    &.width-50
+      width: 50%
+      max-width: 480px
+
+.mxd-services-cards-s__tags
+  display: flex
+  flex-wrap: wrap
+  gap: 1rem
+  margin-bottom: 2.6rem
+
+.mxd-services-cards-s__image
+  width: 100%
+  margin-top: 2.8rem
+  +MQ(L)
+    +position(absolute, 0 -3rem null null)
+    width: 50%
+  +MQ(XL)
+    max-width: none
+    margin-top: 0
+    z-index: 0
+    &.image-right
+      top: 3rem
+    &.image-top-right
+      width: 260px
+      top: -80px
+      right: -30px
+    &.image-bottom
+      width: 100%
+      max-width: 300px
+      top: auto
+      right: auto
+      +center(x)
+      bottom: -160px
+    &.image-bottom-2
+      bottom: -260px
+    &.image-top
+      width: 100%
+      max-width: 330px
+      top: auto
+      right: auto
+      top: -120px
+  +MQ(XXXL)
+    &.image-top-right
+      width: 414px
+      top: -120px
+      right: -60px
+    &.image-bottom
+      max-width: 470px
+      bottom: -200px
+    &.image-bottom-2
+      bottom: -350px
+    &.image-top
+      max-width: 470px
+      top: -100px

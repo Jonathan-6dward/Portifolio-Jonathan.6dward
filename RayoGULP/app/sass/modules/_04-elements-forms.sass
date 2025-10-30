@@ -1,0 +1,82 @@
+.form-container
+  position: relative
+  
+.form
+  opacity: 1
+  transition: opacity var(--_animspeed-slow) ease-in-out
+  &.is-hidden
+    opacity: 0
+
+form
+  position: relative
+  width: 100%
+  input, textarea
+    position: relative
+    display: block
+    width: 100%
+    border: none
+    outline: none
+    margin: 0
+    padding: 1.2rem 0.2rem
+    background-color: transparent
+    border-bottom: 2px solid var(--st-medium)
+    font: normal var(--fw-regular) 2.2rem var(--_font-accent)
+    height: 6rem
+    line-height: 6rem
+    color: var(--t-bright)
+    &:focus
+      border-bottom: 2px solid var(--st-bright)
+  button
+    //margin-top: 1.75rem
+  textarea
+    height: 16rem
+    line-height: 1.6
+    resize: none
+  ::-webkit-input-placeholder
+    color: var(--t-muted)
+  :-moz-placeholder
+    color: var(--t-muted)
+  ::-moz-placeholder
+    color: var(--t-muted)
+  :-ms-input-placeholder
+    color: var(--t-muted)
+  input:focus:required:invalid,
+  textarea:focus:required:invalid
+    color: var(--t-bright)
+  input:required:valid,
+  textarea:required:valid
+    color: var(--t-bright)
+  +MQ(M)
+    textarea
+      height: 23rem
+  +MQ(XXXL)
+    input,
+    textarea
+      font-size: 2.2rem
+  
+.form__reply
+  +position(absolute, auto auto 0 0)
+  opacity: 0
+  transition: opacity var(--_animspeed-slow) ease-in-out
+  &.centered
+    +position(absolute, auto auto auto auto)
+    +center
+    max-width: 400px
+  &.is-visible
+    opacity: 1
+
+.reply__icon
+  display: block
+  font-size: 6rem
+  color: var(--t-bright)
+  margin-bottom: 1.2rem
+
+.reply__title
+  font: normal var(--fw-medium) 3.6rem/1.2 var(--_font-accent)
+  color: var(--t-bright)
+  margin-bottom: 1.4rem
+
+.reply__text
+  display: block
+  font: normal var(--fw-regular) 1.8rem/1.6 var(--_font-accent)
+  color: var(--t-medium)

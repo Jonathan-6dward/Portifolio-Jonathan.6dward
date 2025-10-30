@@ -1,0 +1,251 @@
+.marquee
+  max-width: 100%
+  overflow: hidden
+  &.bright
+    .marquee__text,
+    .marquee__image
+      color: var(--t-bright)
+  &.medium
+    .marquee__text,
+    .marquee__image
+      color: var(--t-medium)
+  &.muted
+    .marquee__text,
+    .marquee__image
+      color: var(--t-muted)
+  &.muted-extra
+    .marquee__text,
+    .marquee__image
+      color: var(--t-muted-extra)
+  &.permanent-desktop
+    .marquee__text,
+    .marquee__image
+      color: var(--t-bright)
+  +MQ(XL)
+    &.permanent-desktop
+      .marquee__text,
+      .marquee__image
+        color: var(--pt-t-light-bright)
+      .marquee__text
+        font-weight: var(--fw-regular)
+
+.marquee--gsap
+
+.marquee--gsap .marquee__top,
+.marquee--gsap .marquee__bottom
+  translate: calc(-100% + 100vw) !important
+
+.marquee-right--gsap .marquee__toright,
+.marquee-left--gsap .marquee__toleft
+  translate: calc(-100% + 100vw) !important
+
+.marquee__top,
+.marquee__bottom,
+.marquee__toleft,
+.marquee__toright,
+.items__container
+  position: relative
+  display: flex
+  width: max-content
+  will-change: transform
+
+.marquee__item
+  margin-top: 1.5rem
+  margin-right: 1.5rem
+  &.one-line
+    margin-top: 0
+  &.item-regular-xl
+    margin-right: 3rem
+  +MQ(M)
+    margin-top: 3rem
+    margin-right: 3rem
+    &.one-line
+      margin-top: 0
+    &.item-regular-xl
+      margin-right: 6rem
+
+.marquee__item
+  position: relative
+  width: 430px
+  height: 320px
+  border-radius: var(--_radius-m)
+  overflow: hidden
+  display: flex
+  align-items: center
+  gap: 20px
+  animation: animateZ 1s infinite
+  img
+    display: block
+    width: 100%
+    height: 100%
+    object-fit: cover
+  &.overflow-visible
+    overflow: visible
+  &.has-caption
+    display: flex
+    align-items: flex-end
+    justify-content: flex-start
+    background-color: var(--accent)
+    p
+      font: normal var(--fw-medium) 2.2rem/1.2 var(--_font-accent)
+      color: var(--t-opp-bright)
+  &.item-vertical
+    width: 400px
+    height: 460px
+  &.item-regular
+    width: auto
+    height: auto
+    border-radius: 0
+    gap: 0
+    background-color: transparent
+    animation: animateZ 1s infinite
+  &.item-regular-xl
+    gap: 3rem
+  &.item-partners
+    justify-content: center
+    width: 380px
+    height: 250px
+    &::before
+      content: ""
+      display: block
+      +position(absolute, 0 null null 0)
+      width: 100%
+      height: 100%
+      background-color: var(--base-tint)
+      border-radius: var(--_radius-m)
+      z-index: -1
+      transform: scale(1)
+      transition: transform var(--_animspeed-slow) var(--_animbezier)
+    img
+      width: 170px
+      height: auto
+  &.item-large
+    width: 830px
+    height: 630px
+  +MQ(M)
+    width: 490px
+    height: 360px
+    &.has-caption
+      p
+        font-size: 3rem
+    &.item-vertical
+      width: 525px
+      height: 600px
+    &.item-regular-xl
+      gap: 6rem
+  +MQ(XL)
+    width: 540px
+    height: 400px
+    &.item-vertical
+      width: 470px
+      height: 540px
+  +MQ(XXL)
+    &.item-large
+      width: 880px
+      height: 670px
+  +MQ(XXXL)
+    width: 730px
+    height: 540px
+    &.has-caption
+      p
+        font-size: 5rem
+    &.item-vertical
+      width: 525px
+      height: 600px
+    &.item-large
+      width: 1000px
+      height: 760px
+
+.marquee__link
+  display: block
+  width: 100%
+  height: 100%
+  img
+    display: block
+    width: 100%
+    height: 100%
+    object-fit: cover
+ 
+.marquee__text
+  margin-right: 1.6rem
+  &.text-with-gliph
+    margin-right: 0
+    &::after
+      content: "*"
+      display: inline
+      padding-left: 1.6rem
+  +MQ(XL)
+    margin-right: 3.6rem
+    &.text-with-gliph
+      &::after
+        padding-left: 3.6rem
+
+.marquee__image
+  flex-shrink: 0
+  width: 4.1rem
+  height: 4.1rem
+  &.image-xl
+    width: 9rem
+    height: 9rem
+  +MQ(M)
+    width: 8.1rem
+    height: 8.1rem
+    &.image-xl
+      width: 14rem
+      height: 14rem
+  +MQ(XXL)
+    &.image-xl
+      width: 18rem
+      height: 18rem
+
+.marquee__image img,
+.marquee__image video
+  width: 100%
+  height: 100%
+  object-fit: cover
+
+.marquee__text
+  font: normal var(--fw-regular) 6rem/1.2 var(--_font-accent)
+  letter-spacing: -0.06rem
+  &.text-xl
+    font-weight: var(--fw-medium)
+    font-size: 20rem
+    line-height: 0.8
+  +MQ(M)
+    font-size: 12rem
+    &.text-xl
+      font-size: 30rem
+  +MQ(XL)
+    font-size: 12rem
+  +MQ(XXL)
+    &.text-xl
+      font-size: 40rem
+
+.marquee__component
+  display: flex
+  width: auto
+  height: 280px
+  margin: 3rem 0
+  border-radius: var(--_radius-m)
+  overflow: hidden
+  padding: 1rem
+  background-color: var(--base-tint)
+  border: 1px solid var(--st-muted)
+  img
+    border-radius: 1rem
+  +MQ(M)
+    border-radius: 2rem
+  +MQ(XXXL)
+    height: 320px
+
+@keyframes toLeft
+  to
+    transform: translateX(calc(-50%))
+
+@keyframes toRight
+  to
+    transform: translateX(0)
+
+@keyframes animateZ
+  to
+    transform: translateZ(1px)

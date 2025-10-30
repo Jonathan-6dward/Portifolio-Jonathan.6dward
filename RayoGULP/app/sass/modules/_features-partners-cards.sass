@@ -1,0 +1,38 @@
+.mxd-partners-cards
+  position: relative
+
+.mxd-partners-cards__item
+  position: relative
+  height: 250px
+
+.mxd-partners-cards__inner
+  position: relative
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 100%
+  height: 100%
+  &::before
+    content: ""
+    display: block
+    +position(absolute, 0 null null 0)
+    width: 100%
+    height: 100%
+    background-color: var(--base-tint)
+    border-radius: var(--_radius-m)
+    z-index: -1
+    transform: scale(1)
+    transition: transform var(--_animspeed-slow) var(--_animbezier)
+  .no-touch &:hover
+    &::before
+      transform: scale(1.04)
+    .mxd-partners-cards__logo
+      img
+        opacity: 1
+
+.mxd-partners-cards__logo
+  width: 170px
+  height: auto
+  img
+    opacity: 0.6
+    transition: opacity var(--_animspeed-slow) ease

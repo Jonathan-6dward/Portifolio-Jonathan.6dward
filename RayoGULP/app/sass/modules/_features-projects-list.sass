@@ -1,0 +1,221 @@
+.mxd-projects-list
+  position: relative
+  display: flex
+  flex-direction: column
+  +MQ(XL)
+    @media (hover) and (prefers-reduced-motion: no-preference)
+      & > .mxd-projects-list__item
+        transition: opacity .3s ease
+      &:hover > .mxd-projects-list__item:not(:hover)
+        opacity: .2
+
+.mxd-projects-list__item
+  position: relative
+  display: block
+  margin-top: -2px
+  &:first-of-type
+    margin-top: 0
+  +MQ(XL)
+    .no-touch &:hover
+      .mxd-projects-list__title
+        p
+          transform: translateX(0)
+      .mxd-projects-list__icon
+        transform: translateX(0)
+        i
+          &::before
+            animation: var(--_animspeed-slow) var(--_animbezier) 0.2s 1 both slideRight
+      .mxd-projects-list__product
+        p
+          transform: translateX(0)
+      .mxd-projects-list__icon-v2
+        transform: translateX(0)
+        i
+          &::before
+            animation: var(--_animspeed-slow) var(--_animbezier) 0.3s 1 both slideRightUp
+
+
+.mxd-projects-list__border
+  position: relative
+  left: 1.5rem
+  width: calc( 100% - 3rem )
+  height: 2px
+  background-color: var(--st-bright)
+
+.mxd-projects-list__inner
+  display: block
+  padding: 3rem 0
+
+.mxd-projects-list__inner-v2
+  display: block
+  padding: 4rem 0 5.6rem 0
+  +MQ(M)
+    padding: 3.7rem 0 5.5rem 0
+  +MQ(XL)
+    padding: 6rem 0
+
+.mxd-projects-list__title
+  display: flex
+  align-items: center
+  gap: 1rem
+  margin-bottom: 3.6rem
+  overflow: hidden
+  //background-color: pink
+  p
+    font: normal var(--fw-medium) 3rem/1.2 var(--_font-accent)
+    letter-spacing: -0.06rem
+    color: var(--t-bright)
+  +MQ(M)
+    margin-bottom: 3.9rem
+    p
+      font-size: 4.4rem
+  +MQ(XL)
+    display: flex
+    align-items: center
+    gap: 1rem
+    height: 100%
+    margin-bottom: 0
+    p
+      transform: translateX(-5.4rem)
+      transition: transform var(--_animspeed-medium) var(--_animbezier)
+  +MQ(XXXL)
+    p
+      font-size: 4.4rem
+
+.mxd-projects-list__title-v2
+  display: flex
+  align-items: center
+  gap: 1rem
+  margin-bottom: 3.1rem
+  overflow: hidden
+  //background-color: pink
+  p
+    font: normal var(--fw-medium) 4.4rem/1.2 var(--_font-accent)
+    letter-spacing: -0.06rem
+    color: var(--t-bright)
+  +MQ(M)
+    margin-bottom: 3rem
+    p
+      font-size: 5rem
+  +MQ(XL)
+    display: flex
+    align-items: center
+    gap: 1rem
+    height: 100%
+    margin-bottom: 0
+  +MQ(XXXL)
+    p
+      font-size: 7rem
+
+.mxd-projects-list__icon
+  position: relative
+  display: flex
+  font-size: 3rem
+  i
+    display: inline-flex
+    position: relative
+    overflow: hidden
+    color: var(--t-bright)
+    transition: color var(--_animspeed-medium) var(--_animbezier)
+  +MQ(M)
+    font-size: 4.4rem
+  +MQ(XL)
+    transform: translateX(-5.4rem)
+    transition: transform var(--_animspeed-medium) var(--_animbezier)
+
+.mxd-projects-list__icon-v2
+  position: relative
+  display: flex
+  font-size: 1.8rem
+  i
+    display: inline-flex
+    position: relative
+    overflow: hidden
+    color: var(--t-bright)
+    transition: color var(--_animspeed-medium) var(--_animbezier)
+  +MQ(XL)
+    font-size: 2.2rem
+    transform: translateX(3.2rem)
+    transition: transform var(--_animspeed-medium) var(--_animbezier)
+  +MQ(XXXL)
+    font-size: 2.6rem
+    transform: translateX(3.8rem)
+
+.mxd-projects-list__image
+  display: block
+  border-radius: var(--_radius-m)
+  overflow: hidden
+  margin-bottom: 3.4rem
+  +MQ(XL) 
+    display: none
+
+.mxd-projects-list__tagslist
+  margin-bottom: 0.6rem
+  ul
+    li
+      p
+        color: var(--t-bright)
+  +MQ(M)
+    margin-bottom: 1.2rem
+  +MQ(XL)
+    margin-bottom: 0
+
+.mxd-projects-list__tagslist-v2
+  margin-bottom: 1rem
+  ul
+    display: flex
+    gap: 1rem
+    color: var(--t-bright)
+    li
+      display: flex
+      align-items: center
+      gap: 1rem
+      p
+        line-height: 1.2
+        color: var(--t-bright)
+      svg
+        width: 1.7rem
+        height: 1.7rem
+        fill: currentColor
+  +MQ(M)
+    margin-bottom: 0
+  +MQ(XL)
+    display: flex
+    align-items: center
+    height: 100%
+    ul
+      transition: transform var(--_animspeed-medium) var(--_animbezier)
+
+.mxd-projects-list__date
+  text-align: right
+  p
+    color: var(--t-bright)
+  +MQ(XL)
+    text-align: right
+
+.mxd-projects-list__product
+  display: flex
+  align-items: center
+  justify-content: flex-start
+  gap: 0.8rem
+  text-align: right
+  p
+    line-height: 1.2
+    font-weight: var(--fw-medium)
+    color: var(--t-bright)
+  +MQ(M)
+    justify-content: flex-end
+    gap: 1.2rem
+  +MQ(XL)
+    display: flex
+    align-items: center
+    justify-content: end
+    width: 100%
+    height: 100%
+    overflow: hidden
+    p
+      transform: translateX(3.2rem)
+      transition: transform var(--_animspeed-medium) var(--_animbezier)
+  +MQ(XXXL)
+    p
+      transform: translateX(3.8rem)

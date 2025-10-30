@@ -1,0 +1,133 @@
+// Center vertically and/or horizontally an absolute positioned element
+=center($xy: xy)
+  @if $xy == xy
+    left: 50%
+    top: 50%
+    bottom: auto
+    right: auto
+    transform: translateX(-50%) translateY(-50%)
+  @else if $xy == x
+    left: 50%
+    right: auto
+    transform: translateX(-50%)
+  @else if $xy == y
+    top: 50%
+    bottom: auto
+    transform: translateY(-50%)
+
+// Antialiasing mode font rendering
+=font-smoothing
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+=text-link-bright
+  text-decoration: none
+  background: linear-gradient(to right, var(--t-bright), var(--t-bright)), linear-gradient(to right, rgba(0,0,0,0.0), rgba(0,0,0,0.0))
+  background-size: 100% 1px, 0 1px
+  background-position: 100% 100%, 0 100%
+  background-repeat: no-repeat
+  transition: background-size 400ms, color 300ms
+  .no-touch &:hover
+    color: var(--t-bright)
+    background-size: 0 1px, 100% 1px
+=text-link-medium
+  text-decoration: none
+  background: linear-gradient(to right, var(--t-medium), var(--t-medium)), linear-gradient(to right, rgba(0,0,0,0.0), rgba(0,0,0,0.0))
+  background-size: 100% 1px, 0 1px
+  background-position: 100% 100%, 0 100%
+  background-repeat: no-repeat
+  transition: background-size 400ms, color 300ms
+  &.opposite
+    background: linear-gradient(to right, var(--t-opp-medium), var(--t-opp-medium)), linear-gradient(to right, rgba(0,0,0,0.0), rgba(0,0,0,0.0))
+  .no-touch &:hover
+    color: var(--t-bright)
+    background-size: 0 1px, 100% 1px
+    &.opposite
+      color: var(--t-opp-bright)
+=text-link-opp-medium
+  text-decoration: none
+  background: linear-gradient(to right, var(--t-opp-medium), var(--t-opp-medium)), linear-gradient(to right, rgba(0,0,0,0.0), rgba(0,0,0,0.0))
+  background-size: 100% 1px, 0 1px
+  background-position: 100% 100%, 0 100%
+  background-repeat: no-repeat
+  transition: background-size 400ms, color 300ms
+  .no-touch &:hover
+    color: var(--t-opp-bright)
+    background-size: 0 1px, 100% 1px
+      
+=text-link-muted
+  text-decoration: none
+  background: linear-gradient(to right, var(--t-muted), var(--t-muted)), linear-gradient(to right, rgba(0,0,0,0.0), rgba(0,0,0,0.0))
+  background-size: 100% 1px, 0 1px
+  background-position: 100% 100%, 0 100%
+  background-repeat: no-repeat
+  transition: background-size 400ms, color 300ms
+  .no-touch &:hover
+    color: var(--t-medium)
+    background-size: 0 1px, 100% 1px
+=text-link-opp-muted
+  text-decoration: none
+  background: linear-gradient(to right, var(--t-opp-muted), var(--t-opp-muted)), linear-gradient(to right, rgba(0,0,0,0.0), rgba(0,0,0,0.0))
+  background-size: 100% 1px, 0 1px
+  background-position: 100% 100%, 0 100%
+  background-repeat: no-repeat
+  transition: background-size 400ms, color 300ms
+  .no-touch &:hover
+    color: var(--t-opp-bright)
+    background-size: 0 1px, 100% 1px
+=text-link-transparent-bright
+  text-decoration: none
+  background: linear-gradient(to right, rgba(0,0,0,0.0), rgba(0,0,0,0.0)), linear-gradient(to right, var(--t-bright), var(--t-bright))
+  background-size: 100% 1px, 0 1px
+  background-position: 100% 100%, 0 100%
+  background-repeat: no-repeat
+  transition: background-size 300ms, color 300ms
+  .no-touch &:hover
+    color: var(--t-bright)
+    background-size: 0 1px, 100% 1px
+=text-link-transparent-permanent
+  text-decoration: none
+  background: linear-gradient(to right, rgba(0,0,0,0.0), rgba(0,0,0,0.0)), linear-gradient(to right, var(--pt-t-light-bright), var(--pt-t-light-bright))
+  background-size: 100% 1px, 0 1px
+  background-position: 100% 100%, 0 100%
+  background-repeat: no-repeat
+  transition: background-size 400ms, color 300ms
+  .no-touch &:hover
+    color: var(--pt-t-light-bright)
+    background-size: 0 1px, 100% 1px
+=text-link-transparent-muted
+  text-decoration: none
+  background: linear-gradient(to right, rgba(0,0,0,0.0), rgba(0,0,0,0.0)), linear-gradient(to right, var(--t-muted), var(--t-muted))
+  background-size: 100% 1px, 0 1px
+  background-position: 100% 100%, 0 100%
+  background-repeat: no-repeat
+  transition: background-size 400ms, color 300ms
+  .no-touch &:hover
+    color: var(--t-medium)
+    background-size: 0 1px, 100% 1px
+
+=standalone-link-medium
+  text-decoration: none
+  background: linear-gradient(to right, var(--st-medium), var(--st-medium)), linear-gradient(to right, var(--accent), var(--accent))
+  background-size: 100% 1px, 0 1px
+  background-position: 100% 100%, 0 100%
+  background-repeat: no-repeat
+  transition: background-size 400ms, color 300ms
+  transform-origin: bottom right
+  .no-touch &:hover
+    color: var(--t-bright)
+    background-size: 0 1px, 100% 1px
+    transform-origin: bottom left
+
+// Box Shadows
+=shadow($level: 1)
+  @if $level == 1
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
+  @if $level == 2
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)
+  @if $level == 3
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)
+  @if $level == 4
+    box-shadow: 0 14px 28px rgba(var(--accent-rgb),0.25), 0 10px 10px rgba(var(--accent-rgb),0.12)
+  @if $level == 5
+    box-shadow: 0 19px 38px rgba(0,0,0,0.20), 0 15px 12px rgba(0,0,0,0.12)

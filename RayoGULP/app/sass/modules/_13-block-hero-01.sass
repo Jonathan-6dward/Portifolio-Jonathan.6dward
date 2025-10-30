@@ -1,0 +1,410 @@
+.mxd-hero-section
+  padding-top: 7.6rem
+  +MQ(M)
+    padding-top: 9.6rem
+
+.mxd-hero-fullheight
+  // will be auto for mobile
+  +MQ(XL)
+    height: 100vh
+
+.mxd-hero-01
+  position: relative
+  width: 100%
+  max-width: 1920px
+  margin: 0 auto
+  +MQ(XL)
+    height: 100%
+    padding-bottom: 4rem
+    // background-color: red
+
+.mxd-hero-01__wrap
+  position: relative
+  width: 100%
+  padding: 0 3rem
+  +MQ(M)  
+    padding: 0 6rem
+  +MQ(XL)
+    height: 100%
+    padding: 0 6rem
+    // background-color: green
+  +MQ(XXXL)
+    padding: 0 9rem
+
+.mxd-hero-01__top
+  position: relative
+  display: flex
+  justify-content: center
+  width: 100%
+  height: auto
+  padding: 11.5rem 0 12.9rem 0
+  +MQ(M)
+    padding: 12.6rem 0 14.6rem 0
+  +MQ(XL)
+    align-items: center
+    height: calc( 100% - 16rem )
+    padding: 0
+  +MQ(XXXL)
+    height: calc( 100% - 20rem )
+
+.mxd-hero-01__title-wrap
+  position: relative
+  width: 100%
+  // background-color: green
+  +MQ(M)
+    width: auto
+  +MQ(XL)
+    padding-bottom: 2rem
+  +MQ(XXXL)
+    padding-bottom: 4rem
+
+.mxd-hero-01__marquee
+  // display: none
+  +position(absolute, 7.6rem 0 null null)
+  width: 100%
+  background-color: var(--accent)
+  border: 1px solid var(--base)
+  border-radius: 3.3rem
+  overflow: hidden
+  .marquee-flex
+    display: flex
+    align-items: center
+    gap: 1rem
+  .marquee__item
+    &.item-regular
+      display: flex
+      align-items: center
+      gap: 1rem
+      margin: 0
+      color: var(--t-opp-bright)
+      p
+        font: normal var(--fw-medium) 6rem/1.1 var(--_font-accent)
+        color: var(--t-opp-bright)
+      svg
+        width: 3.7rem
+        height: 3.7rem
+        fill: currentColor
+  +MQ(M)
+    top: 0
+    right: 7rem
+    width: 265px
+    height: 88px
+    border-radius: 4.4rem
+    .marquee-flex
+      gap: 2.6rem
+    .marquee__item
+      &.item-regular
+        gap: 2rem
+        p
+          font-size: 8rem
+        svg
+          width: 5.1rem
+          height: 5.1rem
+  +MQ(XL)
+    right: 11rem
+    width: 389px
+    height: 132px
+    border-radius: 6.6rem
+    .marquee__item
+      &.item-regular
+        gap: 2.6rem
+        p
+          font-size: 12rem
+        svg
+          width: 8.5rem
+          height: 8.5rem
+          fill: currentColor
+  +MQ(XXXL)
+    right: 13.3rem
+    width: 430px
+    height: 154px
+    border-radius: 7.7rem
+    .marquee__item
+      &.item-regular
+        p
+          font-size: 14rem
+        svg
+          width: 9.2rem
+          height: 9.2rem
+
+.hero-01-title
+  position: relative
+  display: flex
+  flex-direction: column
+  gap: 1rem
+  +MQ(M)
+    justify-content: center
+    gap: 1.4rem
+    font-size: 8rem
+  +MQ(XL)
+    gap: 2rem
+    font-size: 12rem
+  +MQ(XXXL)
+    font-size: 14rem
+
+.hero-01-title__row
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  // background-color: red
+  gap: 1rem
+  text-align: center
+  +MQ(M)
+    flex-direction: row
+    justify-content: center
+    align-items: center
+    gap: 2rem
+  +MQ(XL)
+    gap: 3.2rem
+  +MQ(XXXL)
+    gap: 3.4rem
+
+.hero-01-title__item
+  display: inline-flex
+  // background-color: yellow
+  &.title-item-transparent
+    opacity: 0
+  &.title-item-image
+    display: none
+    svg
+      fill: currentColor
+  +MQ(M)
+    white-space: nowrap
+    &.title-item-transparent
+      // background-color: pink
+      padding: 0 5rem
+      border-radius: 4.4rem
+      color: var(--t-opp-bright)
+    &.title-item-image
+      display: inline-flex
+      padding-top: 1rem
+      svg
+        width: 5.1rem
+        height: 5.1rem
+  +MQ(XL)
+    &.title-item-transparent
+      padding: 0 7rem
+      border-radius: 6.6rem
+    &.title-item-image
+      svg
+        width: 8.5rem
+        height: 8.5rem
+  +MQ(XXXL)
+    &.title-item-transparent
+      border-radius: 7.7rem
+    &.title-item-image
+      svg
+        width: 9.2rem
+        height: 9.2rem
+
+.mxd-hero-01__images
+  +position(absolute, 0 null null 0)
+  width: 100%
+  height: 100%
+  // background-color: blue
+
+.hero-01-image
+  position: absolute
+  display: none
+  &.image-01
+    width: 180px
+    top: -6%
+    left: -20%
+  &.image-02
+    top: -20%
+    right: -1.5rem
+  &.image-03
+    top: 86%
+    left: 0
+  &.image-02,
+  &.image-03
+    width: 100px
+    z-index: 1
+  +MQ(M)
+    display: block
+    &.image-01
+      top: -26%
+      left: -5%
+    &.image-02
+      top: -36%
+      left: auto
+      right: 5%
+    &.image-03
+      top: 90%
+      left: 35%
+  +MQ(XL)
+    &.image-01
+      width: 260px
+      top: -24%
+      left: -7%
+    &.image-02,
+    &.image-03
+      width: 140px
+    &.image-02
+      top: -34%
+      right: 6%
+    &.image-03
+      top: 80%
+      left: 42%
+  +MQ(XXXL)
+    &.image-01
+      width: 300px
+    &.image-02,
+    &.image-03
+      width: 180px
+    &.image-03
+      top: 76%
+      left: 38%
+    &.image-02
+      top: -36%
+      right: 5%
+
+.mxd-hero-01__bottom
+  position: relative
+  display: flex
+  flex-direction: column-reverse
+  width: 100%
+  +MQ(XL)
+    flex-direction: row
+    gap: 6rem
+    height: 16rem
+  +MQ(XXXL)
+    height: 20rem
+    // background-color: pink
+
+.mxd-hero-01__data-wrap
+  position: relative
+  padding: 14rem 0 13.2rem 0
+  +MQ(XL)
+    display: flex
+    // gap: 8vw
+    justify-content: space-between
+    flex: 1
+    padding-top: 4rem
+    // background-color: yellow
+  +MQ(XXXL)
+    padding-right: 15rem
+
+.mxd-hero-01__dash-line
+  display: none
+  width: 100%
+  height: 1rem
+  +position(absolute, 0 null null 0)
+  // background-color: red
+  +MQ(XL)
+    display: block
+
+.dash-line
+  --s: 0.8rem
+  height: 3px
+  background: radial-gradient(circle closest-side, var(--st-muted) 98%,#0000) 0 0/var(--s) 100%, linear-gradient(90deg, var(--st-muted) 50%, #0000 0) calc(var(--s)/2) 0/calc(2*var(--s)) 100%
+
+.mxd-hero-01__data-btn
+  margin-bottom: 3.1rem
+  +MQ(XL)
+    flex-basis: 12rem
+    flex-grow: 0
+    flex-shrink: 0
+    height: 12rem
+    margin-bottom: 0
+    // background-color: pink
+  +MQ(XXXL)
+    flex-basis: 16rem
+    height: 16rem
+
+.mxd-hero-01__data-descr
+  margin-bottom: 2.3rem
+  +MQ(XL)
+    width: 386px
+    margin-bottom: 0
+
+.mxd-hero-01__data-socials
+  ul
+    display: flex
+    flex-direction: column
+    // background-color: red
+    li
+      display: flex
+      align-items: center
+      gap: 1.2rem
+      color: var(--t-bright)
+      svg
+        width: 1.5rem
+        height: 1.5rem
+        fill: currentColor
+      a
+        font: normal var(--fw-regular) 1.8rem/1.6 var(--_font-accent)
+        color: var(--t-bright)
+  +MQ(XL)
+    ul
+      li
+        svg
+          width: 1.9rem
+          height: 1.9rem
+  +MQ(XXXL)
+    ul
+      li
+        a
+          font-size: 2.2rem
+
+.mxd-hero-01__video-wrap
+  position: relative
+  border-radius: var(--_radius-m)
+  overflow: hidden
+  +MQ(XL)
+    flex-basis: 24.6rem
+    flex-grow: 0
+    flex-shrink: 0
+    height: 16rem
+    // background-color: green
+  +MQ(XXXL)
+    flex-basis: 30.8rem
+    height: 20rem
+
+.mxd-hero-01__video-btn
+  +position(absolute, null 0 0 null)
+  padding: 1rem
+
+.mxd-hero-01__video
+  display: block
+  width: 100%
+  height: 100%
+  object-fit: cover
+
+.mxd-pulse
+  animation: mxd-pulse 1.2s infinite ease-in-out alternate
+
+@keyframes mxd-pulse
+  from 
+    transform: scale(0.94)
+  to
+    transform: scale(1.06)
+
+.mxd-pulse-small
+  animation: mxd-pulse 1.2s infinite ease-in-out alternate
+
+@keyframes mxd-pulse
+  from 
+    transform: scale(0.94)
+  to
+    transform: scale(1.02)
+
+.mxd-move
+  animation: mxd-move 1.2s infinite ease-in-out alternate
+
+.mxd-move-slow
+  animation: mxd-move 2s infinite ease-in-out alternate
+
+@keyframes mxd-move
+  from 
+    transform: translateY(-1rem)
+  to
+    transform: translateY(1rem)
+
+.mxd-rotate
+  animation: spin 5s linear infinite
+
+.mxd-rotate-slow
+  animation: spin 16s linear infinite
+

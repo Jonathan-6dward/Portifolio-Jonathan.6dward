@@ -1,0 +1,206 @@
+h1
+  font: normal var(--fw-medium) 6rem/1.1 var(--_font-accent)
+  letter-spacing: -0.06rem
+  color: var(--t-bright)
+  +MQ(M)
+    font-size: 8rem
+    &.h1-small
+      font-size: 9rem
+  +MQ(XL)
+    font-size: 10rem
+    &.h1-small
+      font-size: 9rem
+  +MQ(XXL)
+    &.h1-small
+      font-size: 9rem
+  +MQ(XXXL)
+    font-size: 12rem
+    &.h1-small
+      font-size: 9rem
+
+.typed-cursor
+  color: var(--accent)
+
+h2
+  font: normal var(--fw-medium) 4.4rem/1.1 var(--_font-accent)
+  letter-spacing: -0.06rem
+  color: var(--t-bright)
+  &.opposite
+    color: var(--t-opp-bright)
+  &.permanent-light
+    color: var(--pt-t-light-bright)
+  &.permanent-dark
+    color: var(--pt-t-dark-bright)
+  +MQ(M)
+    font-size: 7rem
+    &.h2-small
+      font-size: 5rem
+    &.h2-large
+      font-size: 9rem
+  +MQ(XXXL)
+    font-size: 7rem
+    &.h2-small
+      font-size: 7rem
+    &.h2-large
+      font-size: 12rem
+
+h3
+  font: normal var(--fw-medium) 3.6rem/1.2 var(--_font-accent)
+  color: var(--t-bright)
+  &.opposite
+    color: var(--t-opp-bright)
+  +MQ(M)
+    font-size: 5rem
+
+h4
+  font: normal var(--fw-medium) 3rem/1.2 var(--_font-accent)
+  color: var(--t-bright)
+  +MQ(XL)
+    font-size: 4.4rem
+
+h5
+  font: normal var(--fw-medium) 2.6rem/1.2 var(--_font-accent)
+  color: var(--t-bright)
+  small
+    display: block
+    font: normal var(--fw-regular) 1.6rem/1.2 var(--_font-accent)
+    color: var(--t-medium)
+    margin-top: 0.2rem
+  a
+    color: var(--t-bright)
+  &.opposite
+    color: var(--t-opp-bright)
+    a
+      color: var(--t-opp-bright)
+  +MQ(M)
+    font-size: 3.4rem
+  +MQ(XXXL)
+    small
+      font-size: 1.8rem
+
+h6
+  font: normal var(--fw-medium) 2.2rem/1.2 var(--_font-accent)
+  color: var(--t-bright)
+  a
+    color: var(--t-bright)
+  &.opposite
+    color: var(--t-opp-bright)
+    a
+      color: var(--t-opp-bright)
+  +MQ(XL)
+    font-size: 3rem
+
+p
+  font: normal var(--fw-regular) 1.8rem/1.6 var(--_font-accent)
+  color: var(--t-medium)
+  span,
+  a
+    color: var(--t-bright)
+  span
+    font-weight: var(--fw-semibold)
+  a
+    +text-link-medium
+  &.t-120
+    line-height: 1.2
+  &.t-140
+    line-height: 1.4
+  &.t-xsmall
+    font-size: 1.4rem
+    line-height: 1.2
+  &.t-small
+    font-size: 1.6rem
+  &.t-small-mobile
+    font-size: 1.6rem
+  &.t-large
+    font-family: var(--_font-accent)
+    font-size: 2.5rem
+    color: var(--t-bright)
+  &.t-caption
+    line-height: 1.4
+    font-weight: var(--fw-medium)
+  &.t-muted
+    color: var(--t-muted)
+    span
+      color: var(--t-medium)
+    a
+      font-weight: var(--fw-regular)
+      color: var(--t-muted)
+      +text-link-muted
+      &.no-effect
+        background: none
+  &.t-opposite
+    color: var(--t-opp-bright)
+  &.t-opposite-medium
+    color: var(--t-opp-medium)
+    a
+      color: var(--t-opp-bright)
+      +text-link-opp-medium
+  &.t-bright
+    color: var(--t-bright)
+    &.opposite
+      color: var(--t-opp-bright)
+  &.t-medium
+    font-weight: var(--fw-medium)
+  &.t-semibold
+    font-weight: var(--fw-semibold)
+  +MQ(M)
+    &.t-small-mobile
+      font-size: 1.8rem
+  +MQ(XXXL)
+    font-size: 2.2rem
+    &.t-large
+      font-size: 3rem
+    &.t-small
+      font-size: 1.8rem
+    &.t-small-mobile
+      font-size: 2.2rem
+
+.mxd-point-subtitle
+  display: inline-flex
+  align-items: center
+  justify-content: left
+  gap: 1rem
+  font: normal var(--fw-regular) 2.2rem/1.2 var(--_font-accent)
+  color: var(--t-bright)
+  svg
+    width: 1.9rem
+    height: 1.9rem
+    fill: var(--t-bright)
+  span
+    font-weight: var(--fw-regular)
+  a
+    color: var(--t-bright)
+    background: none
+  .no-touch &:hover
+    a
+      color: var(--t-medium)
+
+.mxd-manifest
+  font: normal var(--fw-regular) 2.8rem/1.6 var(--_font-accent)
+  color: var(--t-bright)
+  +MQ(M)
+    font-size: 4.4rem
+  +MQ(XXXL)
+    max-width: 855px
+    &.mxd-manifest-l
+      max-width: none
+
+.mxd-stats-number
+  font: normal var(--fw-medium) 7rem/0.8 var(--_font-accent)
+  color: var(--t-bright)
+  letter-spacing: -0.1rem
+  &.opposite
+    color: var(--t-opp-bright)
+  &.small
+    font-size: 5rem
+  &.xsmall
+    font-size: 5rem
+  +MQ(M)
+    &.small
+      font-size: 7rem
+    &.xsmall
+      font-size: 5rem
+  +MQ(XL)
+    font-size: 9rem
+  +MQ(XXXL)
+    font-size: 12rem

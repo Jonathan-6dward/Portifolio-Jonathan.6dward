@@ -1,0 +1,36 @@
+.mfp-bg
+  background-color: rgba(var(--base-rgb), 0.7)
+  // visibility: hidden
+
+.mfp-image-holder .mfp-close,
+.mfp-iframe-holder .mfp-close
+  color: var(--t-bright)
+  
+  /* overlay at start */
+.mfp-fade.mfp-bg
+  opacity: 0
+  transition: all 0.3s
+
+/* overlay animate in */
+.mfp-fade.mfp-bg.mfp-ready
+  opacity: 1
+
+/* overlay animate out */
+.mfp-fade.mfp-bg.mfp-removing
+  opacity: 0
+
+/* content at start */
+.mfp-fade.mfp-wrap .mfp-content
+  opacity: 0
+  transform: translateY(3rem)
+  transition: all 0.3s var(--_animbezier)
+
+/* content animate it */
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content
+  opacity: 1
+  transform: translateY(0)
+
+/* content animate out */
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content
+  opacity: 0
+  transform: translateY(-3rem)

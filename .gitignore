@@ -1,0 +1,9 @@
+# Dependencies
+RayoGULP/node_modules/
+
+# Build output
+RayoGULP/dist/
+
+# System files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,88 @@
+.testimonials-slider-2
+  position: relative
+  height: auto
+
+.swiper-testimonials-2
+  position: relative
+  height: 100%
+  padding-bottom: 7rem
+  +MQ(XL)
+    &.no-padding
+      padding-bottom: 0
+  
+.swiper-slide
+  &.no-blur
+    filter: blur(0)
+  
+.mxd-testimonials-image
+  position: relative
+
+.mxd-testimonials-image__content
+  position: relative
+  display: flex
+  flex-direction: column
+  gap: 4rem
+  +MQ(XL)
+    padding-right: 6rem
+    padding-bottom: 9.6rem
+
+.mxd-testimonials-image__img
+  position: relative
+  +MQ(XL)
+    display: flex
+    align-items: center
+
+.mxd-testimonials-image__author
+  display: flex
+  gap: 1.5rem
+  +MQ(M)
+    gap: 3rem
+
+.mxd-testimonials-image__avatar
+  width: 8rem
+  height: 8rem
+  border-radius: 50%
+  overflow: hidden
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+  +MQ(M)
+    width: 12rem
+    height: 12rem
+
+.mxd-testimonials-image__info
+  display: flex
+  flex-direction: column
+  justify-content: center
+  gap: 0.6rem
+  width: calc( 100% - 9.5rem )
+  +MQ(M)
+    width: auto
+
+.mxd-testimonials-image__name
+
+.mxd-testimonials-image__position
+  line-height: 1.2
+
+.mxd-testimonials-image__rating
+  display: flex
+  gap: 0.8rem
+  margin-top: 0.5rem
+  i
+    display: block
+    font-size: 1.8rem
+    color: var(--t-bright)
+  &.opposite
+    i
+      color: var(--t-opp-bright)
+  +MQ(XXXL)
+    i
+      font-size: 2rem
+
+.mxd-testimonials-image__text
+  margin-bottom: 6rem
+  p
+    margin-bottom: 3rem
+  +MQ(XL)
+    margin-bottom: 0

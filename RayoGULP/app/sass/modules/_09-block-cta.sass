@@ -1,0 +1,121 @@
+.mxd-promo
+  position: relative
+
+.mxd-promo__inner
+  position: relative
+  width: 100%
+  display: flex
+  flex-direction: column
+  background-color: var(--base-opp)
+  padding-left: 3rem
+  padding-right: 3rem
+  overflow: hidden
+  +MQ(M)
+    padding-left: 5rem
+    padding-right: 5rem
+  +MQ(XL)
+    padding-left: 6rem
+    padding-right: 6rem
+  +MQ(XXXL)
+    padding-left: 9rem
+    padding-right: 9rem
+
+.mxd-promo__bg
+  +position(absolute, -4rem -10rem null null)
+  width: 70%
+  height: calc( 100% + 4rem )
+  background-repeat: no-repeat
+  background-position: left center
+  background-size: cover
+  // background-image: url(../img/backgrounds/1440x900_cta-01.webp)
+  +MQ(XL)
+    background-position: center
+    top: 0
+    right: 0
+    width: 50%
+  //background-color: red
+
+.mxd-promo__content
+  position: relative
+  display: flex
+  flex-direction: column
+  gap: 6rem
+  margin: 12.2rem 0 14rem 0
+  //background-color: pink
+  +MQ(M)
+    margin: 14rem 0 16rem 0
+  +MQ(XXXL)
+    margin: 17.6rem 0 20rem 0
+
+.mxd-promo__title
+  display: block
+  color: var(--t-opp-bright)
+  span
+    color: var(--t-opp-bright)
+  +MQ(XL)
+    width: 70%
+  +MQ(XXXL)
+    width: 60%
+
+.mxd-promo__icon
+  padding-right: 1rem
+  img
+    display: inline
+    width: auto
+    height: 3.4rem
+  +MQ(M)
+    img
+      height: 5.4rem
+  +MQ(XXL)
+    img
+      height: 7rem
+
+.mxd-promo__caption
+  font: normal var(--fw-medium) 4.4rem/1.1 var(--_font-accent)
+  letter-spacing: -0.06rem
+  color: var(--t-bright)
+  +MQ(M)
+    font-size: 8rem
+  +MQ(XXL)
+    font-size: 10rem
+
+.mxd-promo__controls
+
+.mxd-promo__images
+  display: none
+  +MQ(XL)
+    display: flex
+    position: absolute
+    top: 0
+    right: 0
+    width: 46%
+    height: 100%
+    .promo-image
+      display: flex
+      flex-direction: column
+      position: absolute
+      &.bottom-layer
+        order: -1
+    .promo-image-1
+      width: 330px
+      height: auto
+      right: 6rem
+      bottom: 6rem
+    .promo-image-2
+      width: 120px
+      height: auto
+      left: 0
+      bottom: 12rem
+  +MQ(XXL)
+    .promo-image-2
+      left: 6rem
+  +MQ(XXXL)
+    // background-color: green
+    .promo-image-1
+      width: 396px
+      right: 9rem
+      bottom: 9rem
+    .promo-image-2
+      width: 140px
+      left: 6rem
+      bottom: 18rem

@@ -1,0 +1,163 @@
+.mxd-services-cards
+  position: relative
+
+.mxd-services-cards__item
+  position: relative
+  height: auto
+  //height: 540px
+  +MQ(M)
+    height: 540px
+  +MQ(XXXL)
+    height: 760px
+
+.mxd-services-cards__inner
+  display: flex
+  flex-direction: column
+  justify-content: flex-start
+  position: relative
+  width: 100%
+  height: 100%
+  overflow: hidden
+  +MQ(XL)
+    &.justify-end
+      justify-content: flex-end
+    &.justify-between
+      justify-content: space-between
+
+.mxd-services-cards__controls
+  +position(absolute, 1rem 1rem null null)
+  z-index: 2
+
+.mxd-services-cards__title
+  margin-bottom: 3.6rem
+  padding-right: 2.6rem
+  p
+    font: normal var(--fw-medium) 3.6rem/1.1 var(--_font-accent)
+    letter-spacing: -0.06rem
+    color: var(--t-bright)
+    &.opposite
+      color: var(--t-opp-bright)
+    &.permanent-light
+      color: var(--pt-t-light-bright)
+    &.permanent-dark
+      color: var(--pt-t-dark-bright)
+  +MQ(M)
+    margin-bottom: 3.4rem
+    p
+      font-size: 5rem
+  +MQ(XL)
+    z-index: 1
+    &.width-60
+      width: 60%
+      max-width: 640px
+    &.width-70
+      width: 70%
+      max-width: 360px
+  +MQ(XXL)
+    &.width-70
+      max-width: 440px
+  +MQ(XXXL)
+    margin-bottom: 4rem
+    p
+      font-size: 7rem
+    &.width-70
+      max-width: 490px
+
+.mxd-services-cards__info
+  +MQ(XL)
+    z-index: 1
+    &.width-60
+      width: 60%
+      max-width: 640px
+    &.width-70
+      width: 70%
+      max-width: 300px
+  +MQ(XXL)
+    &.width-70
+      max-width: 440px
+  +MQ(XXXL)
+    &.width-70
+      max-width: 490px
+
+.mxd-services-cards__tags
+  display: flex
+  flex-wrap: wrap
+  gap: 1rem
+  margin-bottom: 3.2rem
+  +MQ(XXXL)
+    gap: 1.4rem
+    margin-bottom: 3.8rem
+
+.mxd-services-cards__image
+  width: 100%
+  max-width: 400px
+  margin-top: 3.4rem
+  &.mxd-services-cards-image-3
+    .image-2
+      display: none
+  +MQ(XL)
+    position: absolute
+    max-width: none
+    margin-top: 0
+    z-index: 0
+    &.mxd-services-cards-image-1
+      width: 480px
+      right: 0
+      bottom: -240px
+    &.mxd-services-cards-image-2
+      width: 380px
+      +center(x)
+      bottom: -220px
+    &.mxd-services-cards-image-3
+      //background-color: pink
+      width: 50%
+      height: 100%
+      top: 0
+      right: 0
+      .image-1,
+      .image-2
+        position: absolute
+      .image-1
+        width: 300px
+        left: 0
+        top: -100px
+      .image-2
+        display: block
+        width: 480px
+        bottom: -180px
+        right: -40px
+    &.mxd-services-cards-image-4
+      width: 280px
+      top: 1rem
+      right: -50px
+    &.mxd-services-cards-image-5
+      width: 450px
+      bottom: -30px
+      right: -80px
+  +MQ(XXXL)
+    &.mxd-services-cards-image-1
+      width: 710px
+      right: 0
+      bottom: -320px
+    &.mxd-services-cards-image-2
+      width: 580px
+      +center(x)
+      bottom: -300px
+    &.mxd-services-cards-image-3
+      .image-1
+        width: 400px
+        left: -3rem
+        top: -180px
+      .image-2
+        display: block
+        width: 610px
+        bottom: -130px
+        right: 20px
+    &.mxd-services-cards-image-4
+      width: 410px
+      top: 1rem
+      right: -70px
+    &.mxd-services-cards-image-5
+      width: 670px
+      bottom: -50px
+      right: -100px

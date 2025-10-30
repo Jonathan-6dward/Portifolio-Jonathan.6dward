@@ -1,0 +1,90 @@
+.mxd-demo-components
+  position: relative
+  padding-top: 6.5rem
+  padding-bottom: 8rem
+  +MQ(M)
+    padding-top: 5.6rem
+    padding-bottom: 7.7rem
+  +MQ(XXXL)
+    padding-top: 6.8rem
+    padding-bottom: 9.1rem
+
+.mxd-demo-components__title
+  position: relative
+  display: flex
+  justify-content: center
+  align-items: center
+  text-align: center
+  span
+    font: normal var(--fw-medium) 5rem/1.1 var(--_font-accent)
+    letter-spacing: -0.06rem
+    color: var(--t-bright)
+  +MQ(M)
+    span
+      font-size: 8rem
+  +MQ(XXXL)
+    span
+      font-size: 10rem
+
+.mxd-demo-components__objects
+  +position(absolute, 0 null null 0)
+  width: 100%
+  height: 100%
+  z-index: -1
+  // background-color: pink
+
+.mxd-demo-components__object
+  position: absolute
+  height: auto
+  &.obj-01
+    top: -110px
+    right: 60px
+    width: 140px
+  &.obj-02
+    bottom: 0
+    right: 0
+    width: 80px
+  &.obj-03
+    bottom: -140px
+    left: 0
+    width: 200px
+  +MQ(M)
+    &.obj-01
+      top: -120px
+      right: 60px
+      width: 150px
+    &.obj-02
+      bottom: 0
+      right: 0
+      width: 80px
+    &.obj-03
+      bottom: -140px
+      left: 0
+      width: 220px
+  +MQ(XL)
+    &.obj-01
+      top: -180px
+      right: 80px
+      width: 270px
+    &.obj-02
+      bottom: 1rem
+      right: 0
+      width: 120px
+    &.obj-03
+      bottom: -200px
+      left: 10px
+      width: 340px
+  +MQ(XXXL)
+    &.obj-01
+      top: -220px
+      right: 100px
+      width: 360px
+    &.obj-02
+      bottom: 3rem
+      right: 0
+      width: 160px
+    &.obj-03
+      bottom: -270px
+      left: 10px
+      width: 460px
+      

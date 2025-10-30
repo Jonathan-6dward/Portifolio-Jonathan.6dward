@@ -1,0 +1,169 @@
+.mxd-demo-list
+  position: relative
+  display: flex
+  flex-direction: column
+  gap: 3rem
+  padding-top: 12.9rem
+  +MQ(M)
+    gap: 6rem
+    padding-top: 14.5rem
+  +MQ(XXXL)
+    padding-top: 18.2rem
+
+.mxd-demo-list__row
+  position: relative
+  display: flex
+  flex-direction: column
+  gap: 3rem
+  +MQ(M)
+    gap: 6rem
+  +MQ(XL)
+    flex-direction: row
+
+.mxd-demo-list__item
+  position: relative
+  display: flex
+  flex-direction: column
+  gap: 1rem
+  padding: 1rem
+  background-color: var(--base-tint)
+  border-radius: var(--_radius-m)
+  border: 1px solid var(--st-muted)
+  box-shadow: 0 6px 14px rgba(7, 1, 23, 0), 4px 10px 38px rgba(13, 2, 46, 0)
+  transition: box-shadow var(--_animspeed-medium) var(--_animbezier)
+  .no-touch &:hover
+    +shadow(4)
+    .mxd-demo-list__screen
+      transform: scale(1.014)
+  &.empty-item
+    padding: 5.6rem 3.1rem
+    border: 1px solid var(--base-tint)
+    .no-touch &:hover
+      box-shadow: none
+  &.item-accent
+    background-color: var(--accent)
+    border: 1px solid var(--accent)
+  +MQ(M)
+    &.empty-item
+      padding: 5.6rem
+  +MQ(XL)
+    &.empty-item
+      padding: 3rem
+
+.empty-item__wrap
+  display: flex
+  align-items: center
+  justify-content: center
+  text-align: center
+  +MQ(XL)
+    +position(absolute, 0 null null 0)
+    width: 100%
+    height: 100%
+    // background-color: red
+    display: flex
+    align-items: center
+    justify-content: center
+    text-align: center
+
+.empty-item__logo
+  position: relative
+  display: flex
+  align-items: center
+  justify-content: center
+  text-align: center
+  svg
+    display: inline-flex
+    width: 8rem
+    height: 8rem
+
+.empty-item__caption
+  font: normal var(--fw-medium) 1.8rem/1.2 var(--_font-accent)
+  color: var(--t-medium)
+  padding-top: 1.1rem
+  +MQ(M)
+    font-size: 2.2rem
+    padding-top: 2.6rem
+  +MQ(XL)
+    font-size: 1.8rem
+  +MQ(XXXL)
+    font-size: 2.2rem
+
+.mxd-demo-list__image
+  position: relative
+  display: block
+  overflow: hidden
+  border-radius: 1rem
+  &.image-placeholder
+    display: none
+  img
+    opacity: 0
+  +MQ(M)
+    border-radius: 2rem
+  +MQ(XL)
+    &.image-placeholder
+      display: block
+
+.mxd-demo-list__screen
+  +position(absolute, 0 null null 0)
+  width: 100%
+  height: 100%
+  // background-color: red
+  background-repeat: no-repeat
+  background-position: center
+  background-size: cover
+  transition: transform var(--_animspeed-medium) var(--_animbezier)
+  &.screen-01
+    background-image: var(--bg-demo-screen-01)
+  &.screen-02
+    background-image: var(--bg-demo-screen-02)
+  &.screen-03
+    background-image: var(--bg-demo-screen-03)
+  &.screen-04
+    background-image: var(--bg-demo-screen-04)
+  &.screen-05
+    background-image: var(--bg-demo-screen-05)
+  &.screen-06
+    background-image: var(--bg-demo-screen-06)
+  &.screen-07
+    background-image: var(--bg-demo-screen-07)
+  &.screen-08
+    background-image: var(--bg-demo-screen-08)
+  &.screen-09
+    background-image: var(--bg-demo-screen-09)
+  
+.mxd-demo-list__caption
+  display: flex
+  justify-content: space-between
+  padding: 1rem
+  +MQ(M)
+    padding: 1rem 1.6rem
+
+.mxd-demo-list__link
+  font: normal var(--fw-medium) 1.8rem/1.4 var(--_font-accent)
+  color: var(--t-bright)
+  &.opposite
+    color: var(--t-opp-bright)
+  +MQ(M)
+    font-size: 2.2rem
+  +MQ(XL)
+    &.small
+      font-size: 1.8rem
+  +MQ(XXXL)
+    font-size: 3rem
+    &.small
+      font-size: 2.2rem
+
+.mxd-demo-list__num
+  font: normal var(--fw-medium) 1.8rem/1.4 var(--_font-accent)
+  color: var(--accent)
+  &.opposite
+    color: var(--t-opp-bright)
+  +MQ(M)
+    font-size: 2.2rem
+  +MQ(XL)
+    &.small
+      font-size: 1.8rem
+  +MQ(XXXL)
+    font-size: 3rem
+    &.small
+      font-size: 2.2rem

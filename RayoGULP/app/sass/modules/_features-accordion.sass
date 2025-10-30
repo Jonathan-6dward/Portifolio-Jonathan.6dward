@@ -1,0 +1,55 @@
+.mxd-accordion
+  position: relative
+  +MQ(XL)
+    @media (hover) and (prefers-reduced-motion: no-preference)
+      & > .mxd-accordion__item
+        transition: opacity .3s ease
+      &:hover > .mxd-accordion__item:not(:hover)
+        opacity: .2
+
+.mxd-accordion__item
+  position: relative
+  cursor: pointer
+  margin-top: -2px
+  &:first-of-type
+    margin-top: 0
+
+.mxd-accordion__divider
+  position: relative
+  width: 100%
+  height: 2px
+  background-color: var(--st-bright)
+
+.mxd-accordion__content
+  position: relative
+  display: flex
+  align-items: center
+  justify-content: space-between
+  padding: 0 0 3.6rem 0
+  overflow: hidden
+  display: none
+  +MQ(XL)
+    padding: 0 0 3.4rem 0
+
+.mxd-accordion__title
+  position: relative
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 3rem 0
+  +MQ(XL)
+    padding: 3rem 0 3.4rem 0
+
+.mxd-accordion__arrow
+  display: flex
+  font-size: 2.2rem
+  line-height: 1.2
+  color: var(--t-bright)
+  transform: rotate(0deg)
+  will-change: transform
+  transition: transform var(--_animspeed-medium) var(--_animbezier)
+  +MQ(XL)
+    font-size: 3rem
+
+.accordion-rotate
+  transform: rotate(135deg)

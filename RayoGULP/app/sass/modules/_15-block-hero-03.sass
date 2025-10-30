@@ -1,0 +1,114 @@
+.mxd-hero-03
+  position: relative
+  width: 100%
+  // background-color: pink
+
+.mxd-hero-03__wrap
+  position: relative
+  width: 100%
+  // background-color: green
+
+.mxd-hero-03__top
+  position: relative
+  height: calc( 100vh - 7.6rem )
+  padding-top: 12rem
+  // background-color: green
+  +MQ(M)
+    height: calc( 100vh - 9.6rem )
+    padding-top: 14rem
+
+.mxd-hero-03__bottom
+  position: relative
+
+.mxd-hero-03__marquee
+  position: absolute
+  left: 0
+  +center(y)
+  width: 100%
+  overflow: hidden
+  // background-color: pink
+  .marquee__item
+    width: auto
+    height: auto
+    padding: 1rem 0
+    margin-right: 6rem
+    border-radius: 0
+    overflow: visible
+    // background-color: red
+  +MQ(XXXL)
+    .marquee__item
+      margin-right: 6rem
+
+.hero-03-marquee__video
+  width: 80vw
+  height: 80vw
+  border-radius: 50%
+  overflow: hidden
+  video
+    display: block
+    width: 100%
+    height: 100%
+    object-fit: cover
+  +MQ(M)
+    width: 42vw
+    height: 42vw
+  +MQ(XL)
+    width: 26vw
+    height: 26vw
+  +MQ(XXXL)
+    width: 24vw
+    height: 24vw
+
+.hero-03-marquee__image
+  // background-color: blue
+  position: relative
+  width: 80vw
+  height: auto
+  +MQ(M)
+    width: 42vw
+  +MQ(XL)
+    width: 26vw
+  +MQ(XXXL)
+    width: 24vw
+
+.mxd-hero-03__headline
+  position: absolute
+  bottom: 6rem
+  +center(x)
+  width: 100%
+  max-width: 1920px
+  margin: 0 auto
+  padding: 0 1.5rem
+  mix-blend-mode: difference
+  svg
+    fill: #ffffff
+    mix-blend-mode: difference
+  +MQ(M)
+    padding: 0 4.5rem
+  +MQ(L)
+    bottom: 2rem
+  +MQ(XXXL)
+    padding: 0 7.5rem
+
+.hero-03-headline__caption
+  font: normal var(--fw-medium) 3rem/1.2 var(--_font-accent)
+  color: #ffffff
+  margin-bottom: 5.2rem
+  +MQ(M)
+    font-size: 4.4rem
+    margin-bottom: 4.7rem
+  +MQ(L)
+    margin-bottom: 1rem
+
+.hero-03-headline__hidden
+  display: none
+
+.hero-03-headline__svg-mobile
+  display: block
+  +MQ(L)
+    display: none
+
+.hero-03-headline__svg
+  display: none
+  +MQ(L)
+    display: block

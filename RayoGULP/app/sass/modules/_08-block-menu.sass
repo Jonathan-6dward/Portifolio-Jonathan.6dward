@@ -1,0 +1,363 @@
+.mxd-nav__wrap
+  position: fixed
+  top: auto
+  right: 0
+  bottom: auto
+  left: 0
+  z-index: 100
+
+.mxd-nav__contain
+  position: relative
+  display: flex
+  align-items: center
+  justify-content: flex-end
+  min-height: 4.6rem
+  margin-top: 3rem
+  padding: 0 3rem
+  // background-color: pink
+  z-index: 2
+  pointer-events: none
+  > *
+    pointer-events: auto
+  +MQ(M)
+    min-height: 5.6rem
+    margin-top: 4rem
+    padding: 0 6rem
+  +MQ(XXXL)
+    padding: 0 9rem
+
+.nav_link_wrap
+  position: relative
+  display: inline-flex
+
+.nav_link_svg
+  display: block
+  width: 5rem
+
+.mxd-nav__hamburger
+  position: relative
+  display: flex
+  flex-direction: column
+  gap: 0.7rem
+  justify-content: center
+  align-items: center
+  width: 4.6rem
+  height: 4.6rem
+  +MQ(M)
+    width: 5.6rem
+    height: 5.6rem
+
+.hamburger__base
+  position: absolute
+  inset: 0%
+  border-radius: var(--_radius-l)
+  background-color: var(--base-opp-tint)
+  z-index: 1
+
+.nav_hamburger_bg
+  position: absolute
+  inset: 0%
+  border-radius: 50%
+  background-color: black
+  z-index: 2
+
+.hamburger__line
+  position: relative
+  flex: none
+  width: 50%
+  height: 0.3rem
+  border-radius: 0.3rem
+  background-color: var(--t-opp-bright)
+  z-index: 2
+
+.mxd-menu__wrapper
+  position: absolute
+  inset: 0% 0% auto
+  display: flex
+  align-items: flex-start
+  justify-content: flex-end
+  width: 100%
+  height: 100vh
+  z-index: 1
+  padding: 1.5rem
+  display: none
+  +MQ(M)
+    padding: 2rem 4rem
+  +MQ(XXXL)
+    padding: 2rem 7rem
+
+.mxd-menu__base
+  position: absolute
+  inset: 0%
+  width: 100%
+  height: 100%
+  z-index: 1
+
+.mxd-menu__contain
+  position: relative
+  display: flex
+  flex-direction: column
+  width: 100%
+  max-width: 100%
+  height: 100%
+
+.mxd-menu__inner
+  position: relative
+  display: flex
+  flex-direction: column
+  width: 100%
+  height: 100%
+  padding-top: 7.6rem
+  overflow-y: scroll
+  overscroll-behavior-y: contain
+  scrollbar-width: none
+  &::-webkit-scrollbar
+    display: none
+    -webkit-appearance: none !important
+    width: 0 !important
+    height: 0
+  +MQ(M)
+    &::-webkit-scrollbar
+      display: none
+      width: 0 !important
+  +MQ(XL)
+    flex-direction: row
+    overflow: hidden
+    padding-top: 0
+    padding-bottom: 9.7rem
+  +MQ(XXXL)
+    padding-bottom: 13.7rem
+
+.mxd-menu__left
+  width: 100%
+  height: auto
+  padding: 0 3rem
+  // background-color: blue
+  z-index: 2
+  +MQ(XL)
+    width: 50%
+    height: 100%
+    padding: 4rem 4rem 0 4rem
+    overflow-y: scroll
+    overscroll-behavior-y: contain
+    scrollbar-width: none
+    &::-webkit-scrollbar
+      display: none
+      -webkit-appearance: none !important
+      width: 0 !important
+      height: 0
+  +MQ(XXXL)
+    padding-top: 6rem
+    padding: 6rem 7rem 0 7rem
+
+.mxd-menu__right
+  position: relative
+  padding-top: 5.2rem
+  // background-color: MediumPurple
+  z-index: 2
+  +MQ(XL)
+    width: 50%
+    height: 100%
+    padding-top: 0
+
+.mxd-menu__data
+  position: relative
+  width: 100%
+  display: flex
+  flex-direction: column
+  justify-content: flex-start
+  align-items: left
+  gap: 0.6rem
+  padding: 0 3rem 2.6rem 3rem
+  margin-top: 2.4rem
+  text-align: center
+  z-index: 2
+  p
+    color: var(--t-opp-medium)
+    a
+      color: var(--t-opp-medium)
+      +text-link-opp-muted
+  +MQ(XL)
+    +position(absolute, null null 4rem 0)
+    flex-direction: row
+    justify-content: space-between
+    width: 100%
+    padding: 0 4rem
+    margin-top: 0
+  +MQ(XXXL)
+    bottom: 6rem
+    padding: 0 7rem
+
+.mxd-menu__caption
+  margin-bottom: 4.4rem
+  font-weight: var(--fw-regular-opp)
+  color: var(--t-opp-medium)
+  +MQ(XL)
+    max-width: 380px
+  +MQ(XXXL)
+    max-width: 460px
+
+.mxd-menu__link
+  position: relative
+  z-index: 2
+  color: GreenYellow
+  text-decoration: none
+  font-size: 4rem
+
+.main-menu
+  position: relative
+
+.main-menu__content
+
+.main-menu__accordion
+  display: flex
+  flex-direction: column
+  gap: 1.6rem
+  +MQ(XL)
+    gap: 2rem
+  // background-color: MediumPurple
+
+.main-menu__item
+  position: relative
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  width: 100%
+  color: var(--t-opp-bright)
+  // background-color: pink
+  a
+    display: inline-block
+  &.open
+    .main-menu__toggle
+      svg
+        transform: rotate(135deg)
+
+.main-menu__link
+  height: 4.2rem
+  line-height: 4.2rem
+  // background-color: green
+  font: normal var(--fw-medium-opp) 3.6rem var(--_font-accent)
+  color: var(--t-opp-bright)
+  .btn-caption
+    height: 4.2rem
+    line-height: 4.2rem
+  +MQ(XL)
+    font-size: 5.6rem
+    height: 6.5rem
+    line-height: 6.5rem
+    .btn-caption
+      height: 6.5rem
+      line-height: 6.5rem
+
+.main-menu__toggle
+  position: relative
+  width: 100%
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  align-items: center
+  // background-color: red
+  cursor: pointer
+  img,
+  svg
+    display: inline-flex
+    width: 1.9rem
+    height: 1.9rem
+    transition: transform var(--_animspeed-medium) var(--_animbezier)
+  svg
+    fill: currentColor
+  .no-touch &:hover
+    svg
+      fill: var(--additional)
+  +MQ(XL)
+    img,
+    svg
+      width: 2.3rem
+      height: 2.3rem
+
+.submenu
+  position: relative
+  padding-top: 2rem
+  padding-left: 1.5rem
+  display: none
+  +MQ(M)
+    padding-left: 2rem
+  +MQ(XXXL)
+    padding-left: 3.5rem
+
+.submenu__item
+  display: flex
+  flex-direction: column
+  width: 100%
+  margin-bottom: 1.2rem
+  &:last-of-type
+    margin-bottom: 0
+  a
+    display: inline-flex
+    justify-content: flex-start
+    height: auto
+    // background-color: green
+    font: normal var(--fw-regular-opp) 2rem/1.2 var(--_font-accent)
+    color: var(--t-opp-bright)
+    padding-left: 0
+    .no-touch &:hover
+      color: var(--t-opp-medium)
+      transform: translateX(1rem)
+  &.active
+    a
+      color: color-mix(in srgb, var(--additional), var(--nl-black) 15%)
+      font-weight: 600
+  +MQ(XXL)
+    a
+      font-size: 2.5rem
+
+.menu-promo
+  position: relative
+  padding: 0 3rem
+  +MQ(M)
+    padding: 0 4rem
+  +MQ(XL)
+    height: 100%
+    text-align: right
+  +MQ(XXXL)
+    padding: 0 7rem
+
+.menu-promo__content
+  display: flex
+  flex-direction: column
+  gap: 2.1rem
+  +MQ(XL)
+    +position(absolute, null 0 0 null)
+    align-items: flex-end
+    gap: 3rem
+    width: 80%
+    padding: 0 4rem
+  +MQ(XXXL)
+    padding: 0 7rem
+
+.menu-promo__caption
+  font-weight: var(--fw-regular-opp)
+  color: var(--t-opp-medium)
+  +MQ(XL)
+    max-width: 380px
+  +MQ(XXXL)
+    max-width: 460px
+
+.menu-promo__video
+  position: relative
+  overflow: hidden
+  +MQ(XL)
+    width: 100%
+    height: auto
+    padding: 1rem
+    border-radius: var(--_radius-m)
+    background-color: var(--base-opp)
+
+.menu-video
+  display: block
+  width: 100%
+  height: 100%
+  object-fit: cover
+  border-radius: var(--_radius-m)
+  +MQ(XL)
+    border-radius: 1.8rem

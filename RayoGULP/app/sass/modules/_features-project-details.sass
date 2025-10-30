@@ -1,0 +1,122 @@
+.mxd-project
+  position: relative
+  width: 100%
+  min-width: 360px
+
+.mxd-project__block
+  position: relative
+  margin-top: 12.3rem
+  margin-bottom: 13.1rem
+  &.pre-grid
+    margin-bottom: 10.1rem
+  &.no-margin
+    margin: 0
+  +MQ(M)
+    margin-top: 13.1rem
+    margin-bottom: 15.1rem
+    &.pre-grid
+      margin-bottom: 12.1rem
+  +MQ(XL)
+    margin-top: 14.3rem
+    margin-bottom: 15.1rem
+  +MQ(XXXL)
+    margin-top: 18.3rem
+    margin-bottom: 19rem
+    &.pre-grid
+      margin-bottom: 16.1rem
+
+.mxd-project__subtitle
+  position: relative
+
+.mxd-project__content
+
+.mxd-project__paragraph
+  display: flex
+  flex-direction: column
+  gap: 2rem
+  margin-top: 1.8rem
+  +MQ(M)
+    margin-top: 1.3rem
+  +MQ(XL)
+    margin-top: 0.4rem
+    gap: 3rem
+    &.medium-text
+      margin-top: 0.8rem
+  +MQ(XXXL)
+    max-width: 855px
+    &.medium-text
+      margin-top: 0.6rem
+
+.mxd-project__controls
+  margin-top: 1.3rem
+  +MQ(XL)
+    margin-top: 1.4rem
+  +MQ(XXXL)
+    margin-top: 1.7rem
+
+.mxd-project__client
+  margin-top: 0.2rem
+  +MQ(XL)
+    margin-top: 0
+  +MQ(XXXL)
+    margin-top: 0.2rem
+
+.mxd-project-cards
+  position: relative
+
+.mxd-project-cards__item
+  position: relative
+  height: 460px
+  +MQ(M)
+    height: 420px
+  +MQ(XXXL)
+    height: 600px
+
+.mxd-project-cards__inner
+  display: flex
+  flex-direction: column
+  position: relative
+  width: 100%
+  height: 100%
+  overflow: hidden
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+
+.mxd-project__nav
+  position: relative
+  padding-top: 3rem
+  padding-bottom: 13.3rem
+  //background-color: pink
+  +MQ(M)
+    padding-bottom: 15.1rem
+  +MQ(XL)
+    padding-top: 4rem
+  +MQ(XXXL)
+    padding-bottom: 19.1rem
+
+.mxd-project__divider
+  +position(absolute, 0 null null 1.5rem)
+  width: calc( 100% - 3rem )
+  height: 0.2rem
+  background-color: var(--base-opp)
+
+.mxd-project__navitem
+  display: flex
+  flex-direction: column
+  &.left
+    align-items: start
+  &.right
+    align-items: end
+    text-align: right
+
+.mxd-project__link
+  font: normal var(--fw-medium) 2.2rem/1.2 var(--_font-accent)
+  color: var(--t-bright)
+  &.opposite
+    color: var(--t-opp-bright)
+  span
+    +text-link-transparent-bright
+  +MQ(M)
+    font-size: 3.4rem

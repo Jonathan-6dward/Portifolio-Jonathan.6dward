@@ -1,0 +1,36 @@
+.mxd-pinned-universal
+  position: relative
+
+.mxd-pinned-universal__static
+  //position: relative
+
+.mxd-pinned-universal__static-inner
+  text-align: center
+  +MQ(XL)
+    position: sticky
+    top: 0
+    padding-top: 6rem
+    text-align: left
+  +MQ(XXXL)
+    padding-top: 9rem
+
+.mxd-pinned-universal__scroll
+  +MQ(XL)
+    padding-top: 6rem
+    grid-column-gap: 1.2rem
+    grid-row-gap: 1.2rem
+    flex-flow: column
+    justify-content: flex-start
+    align-items: stretch
+    display: flex
+  +MQ(XXXL)
+    padding-top: 9rem
+
+.mxd-pinned-universal__scroll-inner
+  display: flex
+  flex-direction: column
+  gap: 6.5rem
+  +MQ(M)
+    gap: 7.5rem
+  +MQ(XXXL)
+    gap: 9.3rem

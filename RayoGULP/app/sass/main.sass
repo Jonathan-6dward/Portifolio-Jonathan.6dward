@@ -1,0 +1,710 @@
+// Import Data
+@import "partials/data"
+/*! File name: main.css
+   ------------------------------------------------
+ 
+   ------------------------------------------------
+   Table of Contents
+   ------------------------------------------------
+    01. Fonts
+    02. Variables
+    03. Template Backgrounds
+    04. Basic Styles
+    05. Elements - Page Structure
+    06. Elements - Typography
+    07. Elements - Controls
+    08. Elements - Forms
+    09. Elements - Components
+    10. Elements - Common Classes
+    11. Block - Header
+    12. Block - Menu
+    13. Block - CTA
+    14. Block - Footer
+    15. Block - Popup
+    16. Block - Hero Section #00
+    17. Block - Hero Section #01
+    18. Block - Hero Section #02
+    19. Block - Hero Section #03
+    20. Block - Hero Section #04
+    21. Block - Hero Section #05
+    22. Block - Hero Section #06
+    22. Block - Hero Section #07
+    23. Block - Hero Section #08
+    24. Block - Hero Section #09
+    25. Block - Blog
+    26. Block - Blog Article
+    27. Block - 404 Error
+    28. Block - Demo List
+    29. Block - Demo Cards
+    30. Block - Demo Responsive Promo
+    31. Block - Demo Inner Pages Slider
+    32. Block - Demo Components
+    33. Block - Demo Features
+    34. Block - Demo CTA
+    35. Block - Demo Footer
+    36. Features - Hover Reveal
+    37. Features - About
+    38. Features - Pinned Image
+    39. Features - Pinned Universal
+    40. Features - Pinned Projects
+    41. Features - Projects List
+    42. Features - Projects Masonry
+    43. Features - Awards List
+    44. Features - Statistics Simple
+    45. Features - Statistics Cards
+    46. Features - Services Cards #01
+    47. Features - Services Cards #02
+    48. Features - Services List
+    49. Features - Capabilities List
+    50. Features - Resume List
+    51. Features - Approach List
+    52. Features - Divider Image Parallax
+    53. Features - Marquee
+    54. Features - Stack Services #01
+    55. Features - Stack Services #02
+    56. Features - Stack Projects
+    57. Features - Testimonials Style #01
+    58. Features - Testimonials Style #02
+    59. Features - Partners Cards
+    60. Features - Tech Stack Cards
+    61. Features - Blog Preview
+    62. Features - Accordion
+    63. Features - Pricing Cards
+    64. Features - Team Cards
+    65. Features - Values
+    66. Features - Project Details
+   ------------------------------------------------
+   Table of Contents End
+   ------------------------------------------------ */
+
+/* ------------------------------------------------*/
+/* Fonts Start
+/* ------------------------------------------------*/
+/* Funnel Display font */
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap')
+/* Funnel Sans font */
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap')
+/* ------------------------------------------------*/
+/* Fonts End
+/* ------------------------------------------------*/
+
+// Import Bourbon
+@import "bourbon"
+
+// Import Libs, Mixins and Variables
+@import "partials/layout"
+@import "partials/mixins"
+
+/* ------------------------------------------------*/
+/* Variables Start
+/* ------------------------------------------------*/
+@import "partials/variables"
+/* ------------------------------------------------*/
+/* Variables End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Template Backgrounds Start
+/* ------------------------------------------------*/
+// about photos
+.about-image-1
+  background-image: url(https://dummyimage.com/1400x1000/5d5d5d/838383)
+// parallax image dividers
+.divider-image-1
+  background-image: url(https://dummyimage.com/1920x1200/5d5d5d/838383)
+.divider-image-2
+  background-image: url(https://dummyimage.com/1920x1200/5d5d5d/838383)
+.divider-image-3
+  background-image: url(https://dummyimage.com/1920x1200/5d5d5d/838383)
+.divider-image-4
+  background-image: url(https://dummyimage.com/1920x1200/5d5d5d/838383)
+.divider-image-5
+  background-image: url(https://dummyimage.com/1920x1200/5d5d5d/838383)
+.divider-image-6
+  background-image: url(https://dummyimage.com/1920x1200/5d5d5d/838383)
+.divider-image-7
+  background-image: url(https://dummyimage.com/1920x1200/5d5d5d/838383)
+.divider-image-8
+  background-image: url(https://dummyimage.com/1920x1200/5d5d5d/838383)
+.divider-image-9
+  background-image: url(https://dummyimage.com/1920x1200/5d5d5d/838383)
+.divider-image-10
+  background-image: url(https://dummyimage.com/1920x1200/5d5d5d/838383)
+
+// CTA background image
+.mxd-promo__bg
+  background-image: url(https://dummyimage.com/1400x900/838383/5d5d5d)
+  
+// pinned projects preview
+.preview-image-1
+  background-image: url(https://dummyimage.com/1400x1400/5d5d5d/838383)
+.preview-image-2
+  background-image: url(https://dummyimage.com/1400x1400/5d5d5d/838383)
+.preview-image-3
+  background-image: url(https://dummyimage.com/1400x1400/5d5d5d/838383)
+.preview-image-4
+  background-image: url(https://dummyimage.com/1400x1400/5d5d5d/838383)
+.preview-image-5
+  background-image: url(https://dummyimage.com/1400x1400/5d5d5d/838383)
+.preview-image-6
+  background-image: url(https://dummyimage.com/1400x1400/5d5d5d/838383)
+.preview-image-7
+  background-image: url(https://dummyimage.com/1400x1400/5d5d5d/838383)
+// blog resent posts preview
+.blog-preview-image-1
+  background-image: url(https://dummyimage.com/1000x1250/5d5d5d/838383)
+.blog-preview-image-2
+  background-image: url(https://dummyimage.com/1000x1250/5d5d5d/838383)
+.blog-preview-image-3
+  background-image: url(https://dummyimage.com/1000x1250/5d5d5d/838383)
+
+// inner pages headline images
+.headline-img-01
+  &::before
+    background-image: url(https://dummyimage.com/400x200/5d5d5d/838383)
+.headline-img-02
+  &::before
+    background-image: url(https://dummyimage.com/400x200/5d5d5d/838383)
+.headline-img-03
+  &::after
+    background-image: url(https://dummyimage.com/400x200/5d5d5d/838383)
+.headline-img-04
+  &::before
+    background-image: url(https://dummyimage.com/400x200/5d5d5d/838383)
+.headline-img-05
+  &::before
+    background-image: url(https://dummyimage.com/400x200/5d5d5d/838383)
+.headline-img-06
+  &::before
+    background-image: url(https://dummyimage.com/400x200/5d5d5d/838383)
+.headline-img-07
+  &::before
+    background-image: url(https://dummyimage.com/400x200/5d5d5d/838383)
+
+// team values
+.image-values-1
+  background-image: url(https://dummyimage.com/1200x1600/5d5d5d/838383)
+.image-values-2
+  background-image: url(https://dummyimage.com/1600x1200/5d5d5d/838383)
+
+// project details parallax images
+.prj-details-img-01
+  background-image: url(https://dummyimage.com/1920x1200/414141/636363)
+.prj-details-img-02
+  background-image: url(https://dummyimage.com/1920x1200/414141/636363)
+/* ------------------------------------------------*/
+/* Template Backgrounds End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Basic Styles Start
+/* ------------------------------------------------*/
+@import "modules/00-base"
+/* ------------------------------------------------*/
+/* Basic Styles End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Elements - Page Structure Start
+/* ------------------------------------------------*/
+@import "modules/01-elements-page"
+/* ------------------------------------------------*/
+/* Elements - Page Structure End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Elements - Typography Start
+/* ------------------------------------------------*/
+@import "modules/02-elements-type"
+/* ------------------------------------------------*/
+/* Elements - Typography End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Elements - Controls Start
+/* ------------------------------------------------*/
+@import "modules/03-elements-controls"
+/* ------------------------------------------------*/
+/* Elements - Controls End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Elements - Forms Start
+/* ------------------------------------------------*/
+@import "modules/04-elements-forms"
+/* ------------------------------------------------*/
+/* Elements - Forms End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Elements - Components Start
+/* ------------------------------------------------*/
+@import "modules/05-elements-components"
+/* ------------------------------------------------*/
+/* Elements - Components End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Elements - Common Classes Start
+/* ------------------------------------------------*/
+@import "modules/06-elements-classes"
+/* ------------------------------------------------*/
+/* Elements - Common Classes End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Block - Header Start
+/* ------------------------------------------------*/
+@import "modules/07-block-header"
+/* ------------------------------------------------*/
+/* Block - Header End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Block - Menu Start
+/* ------------------------------------------------*/
+@import "modules/08-block-menu"
+/* ------------------------------------------------*/
+/* Block - Menu End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Block - CTA Start
+/* ------------------------------------------------*/
+@import "modules/09-block-cta"
+/* ------------------------------------------------*/
+/* Block - CTA End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Block - Footer Start
+/* ------------------------------------------------*/
+@import "modules/10-block-footer"
+/* ------------------------------------------------*/
+/* Block - Footer End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Block - Popup Start
+/* ------------------------------------------------*/
+@import "modules/11-block-popup"
+/* ------------------------------------------------*/
+/* Block - Popup End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Block - Hero Section #00 Start
+/* ------------------------------------------------*/
+@import "modules/12-block-hero-00"
+/* ------------------------------------------------*/
+/* Block - Hero Section #00 End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Block - Hero Section #01 Start
+/* ------------------------------------------------*/
+@import "modules/13-block-hero-01"
+/* ------------------------------------------------*/
+/* Block - Hero Section #01 End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Block - Hero Section #02 Start
+/* ------------------------------------------------*/
+@import "modules/14-block-hero-02"
+/* ------------------------------------------------*/
+/* Block - Hero Section #02 End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Block - Hero Section #03 Start
+/* ------------------------------------------------*/
+@import "modules/15-block-hero-03"
+/* ------------------------------------------------*/
+/* Block - Hero Section #03 End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Block - Hero Section #04 Start
+/* ------------------------------------------------*/
+@import "modules/16-block-hero-04"
+/* ------------------------------------------------*/
+/* Block - Hero Section #04 End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Block - Hero Section #05 Start
+/* ------------------------------------------------*/
+@import "modules/17-block-hero-05"
+/* ------------------------------------------------*/
+/* Block - Hero Section #05 End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Block - Hero Section #06 Start
+/* ------------------------------------------------*/
+@import "modules/18-block-hero-06"
+/* ------------------------------------------------*/
+/* Block - Hero Section #06 End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Block - Hero Section #07 Start
+/* ------------------------------------------------*/
+@import "modules/19-block-hero-07"
+/* ------------------------------------------------*/
+/* Block - Hero Section #07 End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Block - Hero Section #08 Start
+/* ------------------------------------------------*/
+@import "modules/20-block-hero-08"
+/* ------------------------------------------------*/
+/* Block - Hero Section #08 End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Block - Hero Section #09 Start
+/* ------------------------------------------------*/
+@import "modules/21-block-hero-09"
+/* ------------------------------------------------*/
+/* Block - Hero Section #09 End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Block - Blog Start
+/* ------------------------------------------------*/
+@import "modules/22-block-blog"
+/* ------------------------------------------------*/
+/* Block - Blog End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Block - Blog Article Start
+/* ------------------------------------------------*/
+@import "modules/23-block-blog-article"
+/* ------------------------------------------------*/
+/* Block - Blog Article End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Block - 404 Error Start
+/* ------------------------------------------------*/
+@import "modules/24-block-404"
+/* ------------------------------------------------*/
+/* Block - 404 Error End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Block - Demo List Start
+/* ------------------------------------------------*/
+@import "modules/25-block-demo-list"
+/* ------------------------------------------------*/
+/* Block - Demo List End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Block - Demo Cards Start
+/* ------------------------------------------------*/
+@import "modules/26-block-demo-cards"
+/* ------------------------------------------------*/
+/* Block - Demo Cards End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Block - Demo Responsive Promo Start
+/* ------------------------------------------------*/
+@import "modules/27-block-demo-resp"
+/* ------------------------------------------------*/
+/* Block - Demo Responsive Promo End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Block - Demo Inner Pages Slider Start
+/* ------------------------------------------------*/
+@import "modules/28-block-demo-slider"
+/* ------------------------------------------------*/
+/* Block - Demo Inner Pages Slider End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Block - Demo Components Start
+/* ------------------------------------------------*/
+@import "modules/29-block-demo-components"
+/* ------------------------------------------------*/
+/* Block - Demo Components End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Block - Demo Features Start
+/* ------------------------------------------------*/
+@import "modules/30-block-demo-features"
+/* ------------------------------------------------*/
+/* Block - Demo Features End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Block - Demo CTA Start
+/* ------------------------------------------------*/
+@import "modules/31-block-demo-cta"
+/* ------------------------------------------------*/
+/* Block - Demo CTA End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Block - Demo Footer Start
+/* ------------------------------------------------*/
+@import "modules/32-block-demo-footer"
+/* ------------------------------------------------*/
+/* Block - Demo Footer End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Features - Hover Reveal Start
+/* ------------------------------------------------*/
+@import "modules/features-hover-reveal"
+/* ------------------------------------------------*/
+/* Features - Hover Reveal End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Features - About Start
+/* ------------------------------------------------*/
+@import "modules/features-about"
+/* ------------------------------------------------*/
+/* Features - About End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Features - Pinned Image Start
+/* ------------------------------------------------*/
+@import "modules/features-pinned-image"
+/* ------------------------------------------------*/
+/* Features - Pinned Image End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Features - Pinned Universal Start
+/* ------------------------------------------------*/
+@import "modules/features-pinned-universal"
+/* ------------------------------------------------*/
+/* Features - Pinned Universal End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Features - Pinned Projects Start
+/* ------------------------------------------------*/
+@import "modules/features-pinned-projects-01"
+/* ------------------------------------------------*/
+/* Features - Pinned Projects End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Features - Projects List Start
+/* ------------------------------------------------*/
+@import "modules/features-projects-list"
+/* ------------------------------------------------*/
+/* Features - Projects List End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Features - Projects Masonry Start
+/* ------------------------------------------------*/
+@import "modules/features-projects-masonry"
+/* ------------------------------------------------*/
+/* Features - Projects Masonry End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Features - Awards List Start
+/* ------------------------------------------------*/
+@import "modules/features-awards-list"
+/* ------------------------------------------------*/
+/* Features - Awards List End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Features - Statistics Simple Start
+/* ------------------------------------------------*/
+@import "modules/features-stats-simple"
+/* ------------------------------------------------*/
+/* Features - Statistics Simple End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Features - Statistics Cards Start
+/* ------------------------------------------------*/
+@import "modules/features-stats-cards"
+/* ------------------------------------------------*/
+/* Features - Statistics Cards End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Features - Services Cards #01 Start
+/* ------------------------------------------------*/
+@import "modules/features-services-cards-01"
+/* ------------------------------------------------*/
+/* Features - Services Cards #01 End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Features - Services Cards #02 Start
+/* ------------------------------------------------*/
+@import "modules/features-services-cards-02"
+/* ------------------------------------------------*/
+/* Features - Services Cards #02 End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Features - Services List Start
+/* ------------------------------------------------*/
+@import "modules/features-services-list"
+/* ------------------------------------------------*/
+/* Features - Services List End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Features - Capabilities List Start
+/* ------------------------------------------------*/
+@import "modules/features-capabilities-list"
+/* ------------------------------------------------*/
+/* Features - Capabilities List End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Features - Resume List Start
+/* ------------------------------------------------*/
+@import "modules/features-resume-list"
+/* ------------------------------------------------*/
+/* Features - Resume List End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Features - Approach List Start
+/* ------------------------------------------------*/
+@import "modules/features-approach"
+/* ------------------------------------------------*/
+/* Features - Approach List End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Features - Divider Image Parallax Start
+/* ------------------------------------------------*/
+@import "modules/features-divider-image-parallax"
+/* ------------------------------------------------*/
+/* Features - Divider Image Parallax End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Features - Marquee Start
+/* ------------------------------------------------*/
+@import "modules/features-marquee"
+/* ------------------------------------------------*/
+/* Features - Marquee End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Features - Stack Services #01 Start
+/* ------------------------------------------------*/
+@import "modules/features-stack-services-01"
+/* ------------------------------------------------*/
+/* Features - Stack Services #01 End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Features - Stack Services #02 Start
+/* ------------------------------------------------*/
+@import "modules/features-stack-services-02"
+/* ------------------------------------------------*/
+/* Features - Stack Services #02 End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Features - Stack Projects Start
+/* ------------------------------------------------*/
+@import "modules/features-stack-projects-01"
+/* ------------------------------------------------*/
+/* Features - Stack Projects End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Features - Testimonials Style #01 Start
+/* ------------------------------------------------*/
+@import "modules/features-testimonials"
+/* ------------------------------------------------*/
+/* Features - Testimonials Style #01 End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Features - Testimonials Style #02 Start
+/* ------------------------------------------------*/
+@import "modules/features-testimonials-2"
+/* ------------------------------------------------*/
+/* Features - Testimonials Style #02 End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Features - Partners Cards Start
+/* ------------------------------------------------*/
+@import "modules/features-partners-cards"
+/* ------------------------------------------------*/
+/* Features - Partners Cards End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Features - Tech Stack Cards Start
+/* ------------------------------------------------*/
+@import "modules/features-tech-stack-cards"
+/* ------------------------------------------------*/
+/* Features - Tech Stack Cards End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Features - Blog Preview Start
+/* ------------------------------------------------*/
+@import "modules/features-blog-preview"
+/* ------------------------------------------------*/
+/* Features - Blog Preview End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Features - Accordion Start
+/* ------------------------------------------------*/
+@import "modules/features-accordion"
+/* ------------------------------------------------*/
+/* Features - Accordion End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Features - Pricing Cards Start
+/* ------------------------------------------------*/
+@import "modules/features-pricing"
+/* ------------------------------------------------*/
+/* Features - Pricing Cards End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Features - Team Cards Start
+/* ------------------------------------------------*/
+@import "modules/features-team"
+/* ------------------------------------------------*/
+/* Features - Team Cards End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Features - Values Start
+/* ------------------------------------------------*/
+@import "modules/features-values"
+/* ------------------------------------------------*/
+/* Features - Values End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Features - Project Details Start
+/* ------------------------------------------------*/
+@import "modules/features-project-details"
+/* ------------------------------------------------*/
+/* Features - Project Details End
+/* ------------------------------------------------*/
+

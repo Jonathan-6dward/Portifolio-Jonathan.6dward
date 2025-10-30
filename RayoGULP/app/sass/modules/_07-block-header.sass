@@ -1,0 +1,37 @@
+.mxd-header
+  position: absolute
+  top: 0
+  left: 3rem
+  display: flex
+  justify-content: space-between
+  width: 100%
+  width: calc( 100% - 11.6rem )
+  padding-top: 3rem
+  // background-color: red
+  z-index: 101
+  transform: scaleY(1)
+  opacity: 1
+  transition: all var(--_animspeed-medium) var(--_animbezier)
+  &.is-hidden
+    transform: scaleY(1.2)
+    opacity: 0
+  &.menu-is-visible
+    z-index: 10
+  +MQ(M)
+    left: 6rem
+    width: calc( 100% - 19.6rem )
+    padding-top: 4rem
+  +MQ(XXXL)
+    left: 9rem
+    width: calc( 100% - 25.6rem )
+
+.mxd-header__logo
+  position: relative
+  display: flex
+
+.mxd-header__controls
+  position: relative
+  display: flex
+  gap: 1rem
+  +MQ(M)
+    gap: 2rem

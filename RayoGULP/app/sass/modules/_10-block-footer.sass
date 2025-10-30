@@ -1,0 +1,246 @@
+.mxd-footer
+  position: relative
+  width: 100%
+  max-width: 1920px
+  margin: 0 auto
+  padding-bottom: 3rem
+  +MQ(M)
+    padding-bottom: 6rem
+
+.mxd-footer__text-wrap
+  position: relative
+  width: 100%
+
+.mxd-footer__fullwidth-text
+  position: relative
+  width: 100%
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  flex: none
+  flex-wrap: nowrap
+  height: min-content
+  max-width: 1920px
+  padding: 0 3rem
+  color: var(--t-bright)
+  //background-color: red
+  z-index: -1
+  padding-top: 12.5rem
+  margin-bottom: 2rem
+  &.personal
+    margin-bottom: 3rem
+  +MQ(M)
+    padding: 0 6rem
+    padding-top: 10.5rem
+    margin-bottom: 0
+  +MQ(XL)
+    &.personal
+      margin-bottom: 5rem
+  +MQ(XXXL)
+    padding: 0 9rem
+    padding-top: 11.1rem
+    margin-bottom: -1rem
+
+.mxd-footer__svg-v2
+  position: relative
+  display: block
+  width: 100%
+  fill: currentColor
+  z-index: -1
+
+.fullwidth-text__tl-trigger
+  +position(absolute, 0 0 null null)
+  width: 0.1rem
+  height: 0.1rem
+
+.mxd-footer__svg
+  position: relative
+  outline: none
+  display: flex
+  flex-direction: column
+  justify-content: flex-start
+  flex-shrink: 0
+  will-change: transform
+  opacity: 1
+  transform: none
+  // background-color: red
+  foreignObject,
+  text
+    position: relative
+    display: flex
+  text
+    width: 100%
+    height: 100%
+    // background-color: pink
+
+.mxd-footer__text
+  display: flex
+  justify-content: center
+  font-style: normal
+  font-weight: var(--fw-semibold)
+  line-height: 1.1
+  font-family: var(--_font-accent)
+  letter-spacing: -0.006rem
+  color: var(--t-bright)
+  font-size: 1.2rem
+
+.mxd-footer__caption
+  display: inline-flex
+  justify-content: center
+  font-style: normal
+  font-weight: var(--fw-semibold)
+  line-height: 1.1
+  font-family: var(--_font-accent)
+  letter-spacing: -0.014rem
+  color: var(--t-bright)
+  font-size: 1.2rem
+  //background-color: greena
+  .word
+    display: flex !important
+    flex-wrap: nowrap !important
+
+
+
+.mxd-footer__footer-blocks
+  position: relative
+  display: flex
+  flex-direction: column
+  gap: 3rem
+  width: 100%
+  max-width: 1920px
+  padding: 0 3rem
+  +MQ(M)
+    padding: 0 6rem
+  +MQ(XL)
+    flex-direction: row
+  +MQ(XXXL)
+    padding: 0 9rem
+
+.footer-blocks__column
+  display: flex
+  flex-direction: column
+  flex: 1
+  gap: 3rem
+  +MQ(XL)
+    height: 650px
+  +MQ(XXXL)
+    height: 650px
+
+.footer-blocks__card
+  display: flex
+  flex-direction: column
+  gap: 3rem
+  width: 100%
+  padding: 3rem
+  background-color: var(--base-tint)
+  border-radius: var(--_radius-m)
+  &.fullheight-card
+    height: 100%
+    justify-content: space-between
+  &.fill-card
+    flex: 1
+    justify-content: space-between
+  +MQ(M)
+    padding: 5rem
+  +MQ(XL)
+
+.footer-blocks__block
+  display: flex
+  flex-direction: column
+  gap: 3rem
+
+.footer-blocks__nav
+  position: relative
+
+.footer-nav
+  display: flex
+  flex-direction: column
+  gap: 1.6rem
+
+.footer-nav__item
+  display: inline-flex
+  align-items: center
+  gap: 1.2rem
+
+.footer-nav__link
+  display: inline-flex
+  font: normal var(--fw-medium) 3rem/1.2 var(--_font-accent)
+  color: var(--t-bright)
+  .btn-caption
+    height: 3.6rem
+    line-height: 1.2
+  +MQ(M)
+    font-size: 4.4rem
+    .btn-caption
+      height: 5.3rem
+
+.footer-nav__counter
+  display: inline-flex
+  align-items: center
+  gap: 0.4rem
+  background-color: var(--accent)
+  color: var(--t-opp-bright)
+  height: 3.6rem
+  border-radius: 1.8rem
+  padding: 0 1.2rem
+  svg
+    width: 1.5rem
+    height: 1.5rem
+  span
+    font-size: 2.2rem
+    letter-spacing: -0.1rem
+    color: var(--t-opp-bright)
+
+.footer-blocks__links
+  display: flex
+  flex-direction: column
+  justify-content: flex-start
+  text-align: left
+  gap: 1rem
+  p
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    text-align: left
+    gap: 0.2rem
+    a
+      .no-touch &:hover
+        color: var(--t-bright)
+  +MQ(M)
+    flex-direction: row
+    justify-content: space-between
+
+.footer-blocks__title
+  position: relative
+
+.footer-blocks__title-m
+  font: normal var(--fw-medium) 3rem/1.2 var(--_font-accent)
+  color: var(--t-bright)
+  +MQ(M)
+    font-size: 3.6rem
+
+.footer-blocks__title-l
+  font: normal var(--fw-medium) 3rem/1.2 var(--_font-accent)
+  color: var(--t-bright)
+  +MQ(M)
+    font-size: 4.4rem
+
+.footer-blocks__socials
+  position: relative
+
+.footer-socials
+  display: flex
+  flex-direction: column
+
+.footer-socials__item
+  display: block
+  margin-bottom: 0.3rem
+  &:last-of-type
+    margin-bottom: 0
+
+.footer-socials__link
+  font: normal var(--fw-regular) 2.2rem/1.6 var(--_font-accent)
+  color: var(--t-bright)
+  .no-touch &:hover
+    color: var(--t-medium)

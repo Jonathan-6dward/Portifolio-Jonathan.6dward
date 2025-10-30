@@ -1,0 +1,220 @@
+.mxd-hero-06
+  position: relative
+  width: 100%
+  padding-top: 7.6rem
+  +MQ(M)
+    padding-top: 9.6rem
+  +MQ(XL)
+    height: 100vh
+
+.mxd-hero-06__wrap
+  position: relative
+  width: 100%
+  height: 100%
+  padding-top: 10.9rem
+  // background-color: green
+  +MQ(M)
+    padding-top: 14.9rem
+  +MQ(XL)
+    
+    display: flex
+    flex-direction: column
+    padding: 4rem 6rem 0 6rem
+  +MQ(XXXL)
+    padding: 4rem 9rem 0 9rem
+
+.mxd-hero-06__top
+  position: relative
+  // background-color: red
+  +MQ(XL)
+    flex: 1
+
+.mxd-hero-06__bottom
+  position: relative
+  padding: 0 3rem
+  // background-color: pink
+  +MQ(M)
+    padding: 0 6rem
+  +MQ(XL)
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    padding: 4rem 0
+  +MQ(XXXL)
+    padding: 4rem 0
+
+.mxd-hero-06__btn-mobile
+  display: flex
+  padding: 0 3rem
+  margin-top: 5.2rem
+  +MQ(M)
+    padding: 0 6rem
+    margin-top: 7.2rem
+  +MQ(XL)
+    display: none
+
+.mxd-hero-06__content
+  position: relative
+  display: flex
+  flex-direction: column-reverse
+  width: 100%
+  overflow: hidden
+  +MQ(XL)
+    flex-direction: column
+    width: 100%
+    height: 100%
+
+.mxd-hero-06__video
+  padding: 0 3rem
+  margin-bottom: 1.5rem
+  video
+    display: block
+    width: 100%
+    height: 100%
+    object-fit: cover
+    border-radius: var(--_radius-m)
+  +MQ(M)
+    padding: 0 6rem
+    margin-bottom: 3rem
+  +MQ(XL)
+    +position(absolute, 0 null null 0)
+    width: 100%
+    height: 100%
+    padding: 0
+    margin-bottom: 0
+    border-radius: var(--_radius-l)
+    overflow: hidden
+    video
+      border-radius: none
+    // background-color: yellow
+
+.hero-06-video__cover
+  display: none
+  +MQ(XL)
+    display: block
+    +position(absolute, 0 null null 0)
+    width: 100%
+    height: 100%
+    background: var(--base)
+    background: linear-gradient(180deg,rgba(0, 0, 0, 0.0) 20%, rgba(0, 0, 0, 0.6) 100%)
+
+.mxd-hero-06__data
+  position: relative
+  display: flex
+  flex-direction: column-reverse
+  overflow: hidden
+  // background-color: green
+  +MQ(XL)
+    width: 100%
+    height: 100%
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-items: flex-start
+
+.mxd-hero-06__list
+  position: relative
+  width: 100%
+  padding: 0 3rem
+  margin-bottom: 5.2rem
+  +MQ(M)
+    padding: 0 6rem
+    margin-bottom: 7.2rem
+  // background-color: red
+  +MQ(XL)
+    padding: 3.4rem 4rem 0 4rem
+    p
+      color: var(--pt-t-light-bright)
+      font-weight: 400
+
+.mxd-hero-06__headline
+  position: relative
+  width: 100%
+  // background-color: pink
+  +MQ(XL)
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+
+.hero-06-headline__descr
+  position: relative
+  width: 100%
+  padding: 0 3rem
+  margin-bottom: 2.5rem
+  // background-color: pink
+  p
+    color: var(--t-bright)
+    font-size: 2rem
+    font-weight: var(--fw-medium)
+    line-height: 1.4
+  +MQ(M)
+    padding: 0 6rem
+    margin-bottom: 1.6rem
+    p
+      max-width: 440px
+  +MQ(XL)
+    display: flex
+    justify-content: space-between
+    align-items: flex-end
+    padding: 0 4rem
+    margin-bottom: 0.4rem
+    p
+      color: var(--pt-t-light-bright)
+      font-weight: 500
+      max-width: 340px
+  +MQ(XXXL)
+    padding: 0 5rem
+    p
+      font-size: 2.4rem
+      max-width: 440px
+
+.hero-06-headline__btn
+  display: none
+  +MQ(XL)
+    display: block
+    position: absolute
+    right: 5rem
+    bottom: 0
+
+.hero-06-headline__content
+  position: relative
+  width: 100%
+  overflow: hidden
+  // background-color: red
+
+.hero-06-headline__title
+  +position(absolute, 0 null null 0)
+  white-space: nowrap
+  opacity: 0
+  visibility: hidden
+
+.mxd-hero-06__marquee
+  margin-bottom: 3.6rem
+  +MQ(M)
+    margin-bottom: 4.3rem
+  +MQ(XL)
+    margin-bottom: 0
+    padding-bottom: 4.3rem
+
+.mxd-hero-06__mark,
+.mxd-hero-06__more
+  position: relative
+
+.mxd-hero-06__mark
+  display: block
+  background-color: var(--base-tint)
+  border-radius: var(--_radius-m)
+  padding: 2rem
+  +MQ(M)
+    padding: 3rem
+  +MQ(XL)
+    display: inline-flex
+    background-color: transparent
+    border-radius: none
+    padding: 0
+
+.mxd-hero-06__more
+  display: none
+  +MQ(XL)
+    display: inline-flex
+

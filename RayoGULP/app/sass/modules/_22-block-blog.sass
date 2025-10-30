@@ -1,0 +1,673 @@
+// breadcrumbs
+.breadcrumbs__nav
+  display: flex
+  flex-wrap: wrap
+  justify-content: flex-start
+  gap: 0.5rem
+  span
+    font: normal var(--fw-regular) 1.8rem/1.4 var(--_font-accent)
+    color: var(--t-muted)
+    &::after
+      content: '/'
+      display: inline-flex
+      margin-left: 0.2rem
+    &:last-of-type
+      &::after
+        display: none
+    a
+      display: inline
+      color: var(--t-muted)
+      +text-link-transparent-muted
+    &.current-item
+      text-decoration: none
+      background: linear-gradient(to right, var(--t-muted), var(--t-muted))
+      background-size: 100% 1px, 0 1px
+      background-position: 100% 100%
+      background-repeat: no-repeat
+      a
+        +text-link-muted
+  +MQ(XL)
+    justify-content: flex-end
+
+// posts area
+.mxd-posts-area
+  position: relative
+  width: 100%
+  display: flex
+  flex-direction: column
+  +MQ(XL)
+    flex-direction: row
+    &.column
+      flex-direction: column
+
+.mxd-posts-container
+  position: relative
+  width: 100%
+  +MQ(XL)
+    width: calc( 100% - 450px )
+    &.fullwidth-posts-container
+      width: 100%
+
+.mxd-sidebar
+  position: relative
+  width: 100%
+  +MQ(XL)
+    width: 450px
+
+// single posts
+.mxd-post
+  position: relative
+  overflow: hidden
+  //background-color: pink
+
+// featured post
+.post-featured
+  display: flex
+  flex-direction: column
+  gap: 12.8rem
+  height: auto
+  padding: 3rem
+  margin-bottom: 6rem
+  &.post-featured-v2
+    margin-bottom: 0
+  +MQ(M)
+    padding: 4rem
+    margin-bottom: 6rem
+  +MQ(XL)
+    &.post-featured-v2
+      height: 760px
+      justify-content: space-between
+  +MQ(XXL)
+    justify-content: space-between
+    gap: 0
+    height: 670px
+    &.post-featured-v2
+      height: 760px
+  +MQ(XXXL)
+    height: 760px
+    &.post-featured-v2
+      height: 930px
+
+.post-featured__thumb
+  display: flex
+  +position(absolute, 0 null null 0)
+  width: 100%
+  height: 100%
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+
+.post-featured__categories
+  position: relative
+  display: flex
+  flex-direction: row
+  align-items: flex-start
+  flex-wrap: wrap
+  gap: 1rem
+  +MQ(XL)
+    flex-direction: column
+
+.post-featured__content
+  position: relative
+  +MQ(M)
+    max-width: 500px
+  +MQ(XL)
+    overflow: hidden
+  +MQ(XXXL)
+    max-width: 600px
+
+.post-featured__meta
+  display: flex
+  flex-wrap: wrap
+  row-gap: 0.4rem
+  column-gap: 1rem
+  color: var(--pt-t-light-bright)
+  margin-bottom: 1.6rem
+  span
+    display: flex
+    align-items: center
+    gap: 1rem
+    font: normal var(--fw-regular) 1.8rem/1.6 var(--_font-accent)
+    a
+      color: var(--pt-t-light-bright)
+    svg
+      width: 1.7rem
+      height: 1.7rem
+      fill: currentColor
+    &.meta-tag
+      font-weight: var(--fw-semibold)
+    &.meta-date
+  +MQ(XXXL)
+    span
+      font-size: 2.2rem
+
+.post-featured__title
+  margin-bottom: 2.3rem
+  color: var(--pt-t-light-bright)
+  a
+    display: inline
+    color: var(--pt-t-light-bright)
+    +text-link-transparent-permanent
+
+.post-featured__excerpt
+  p
+    color: var(--pt-t-light-bright)
+
+.post-featured__btn
+  padding-top: 3.3rem
+
+// simple post
+.post-simple
+  display: flex
+  flex-direction: column
+  gap: 5rem
+  height: auto
+  padding: 6rem 0
+  border-top: 1px solid var(--st-muted)
+  &:last-of-type
+    border-bottom: 1px solid var(--st-muted)
+  +MQ(M)
+    gap: 3rem
+    flex-direction: row
+    padding: 6rem 0
+
+.post-simple__thumb
+  position: relative
+  display: flex
+  width: 100%
+  height: 340px
+  overflow: hidden
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+  .no-touch &:hover
+    .mxd-preview-hover
+      opacity: 1
+      filter: blur(0)
+      backdrop-filter: blur(10px)
+  +MQ(M)
+    flex-basis: 260px
+    flex-grow: 0
+    flex-shrink: 0
+  +MQ(XXL)
+    flex-basis: 300px
+    height: 320px
+  +MQ(XXXL)
+    flex-basis: 400px
+    height: 340px
+
+.post-simple__content
+  display: flex
+  flex-direction: column
+  gap: 3rem
+  +MQ(M)
+    max-width: 665px
+    justify-content: space-between
+  +MQ(XXXL)
+    max-width: 765px
+
+.post-simple__descr
+  display: flex
+  flex-direction: column
+  gap: 1.6rem
+
+.post-simple__meta
+  display: flex
+  flex-wrap: wrap
+  row-gap: 0.4rem
+  column-gap: 1rem
+  color: var(--t-medium)
+  span
+    display: flex
+    align-items: center
+    gap: 1rem
+    font: normal var(--fw-regular) 1.8rem/1.6 var(--_font-accent)
+    a
+      color: var(--t-medium)
+    svg
+      width: 1.7rem
+      height: 1.7rem
+      fill: currentColor
+    &.meta-tag
+      font-weight: var(--fw-semibold)
+    &.meta-date
+    .no-touch &:hover
+      a
+        color: var(--t-bright)
+
+.post-simple__title
+  a
+    display: inline
+    color: var(--t-bright)
+    +text-link-transparent-bright
+
+.post-simple__btn
+
+// secondary post
+.post-secondary
+  position: relative
+  display: flex
+  flex-direction: column
+  gap: 2.6rem
+  +MQ(M)
+    gap: 2.9rem
+
+.post-secondary-container
+  padding-bottom: 3.5rem
+  &:last-of-type
+    padding-bottom: 0
+  +MQ(XL)
+    padding-bottom: 0
+
+.post-secondary__thumb
+  position: relative
+  display: flex
+  overflow: hidden
+  height: 460px
+  .no-touch &:hover
+    .mxd-preview-hover
+      opacity: 1
+      filter: blur(0)
+      backdrop-filter: blur(10px)
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+  +MQ(M)
+    height: 600px
+  +MQ(XL)
+    height: 540px
+  +MQ(XXXL)
+    height: 760px
+
+.post-secondary__categories
+  +position(absolute, 0 null null 0)
+  width: 100%
+  padding: 3rem
+  display: flex
+  flex-direction: row
+  align-items: flex-start
+  flex-wrap: wrap
+  gap: 1rem
+  +MQ(M)
+    padding: 4rem
+  +MQ(XL)
+    flex-direction: column
+
+.post-secondary__descr
+  position: relative
+  display: flex
+  flex-direction: column
+  padding: 0 3rem 0.1rem 3rem
+  gap: 1.6rem
+  +MQ(M)
+    padding: 0 4rem 0.1rem 4rem
+
+.post-secondary__meta
+  position: relative
+  display: flex
+  flex-wrap: wrap
+  row-gap: 0
+  column-gap: 1rem
+  color: var(--t-medium)
+  span
+    display: flex
+    align-items: center
+    gap: 1rem
+    font: normal var(--fw-regular) 1.8rem/1.6 var(--_font-accent)
+    a
+      color: var(--t-medium)
+    svg
+      width: 1.7rem
+      height: 1.7rem
+      fill: currentColor
+    &.meta-tag
+      font-weight: var(--fw-semibold)
+    &.meta-date
+    .no-touch &:hover
+      a
+        color: var(--t-bright)
+
+.post-secondary__title
+  position: relative
+  a
+    display: inline
+    color: var(--t-bright)
+    +text-link-transparent-bright
+
+// archive post
+.mxd-projects-archive
+  position: relative
+  display: flex
+  flex-direction: column
+  +MQ(XL)
+    @media (hover) and (prefers-reduced-motion: no-preference)
+      & > .mxd-projects-archive__item
+        transition: opacity .3s ease
+      &:hover > .mxd-projects-archive__item:not(:hover)
+        opacity: .2
+
+.mxd-projects-archive__item
+  position: relative
+  display: block
+  margin-top: -2px
+  &:first-of-type
+    margin-top: 0
+  +MQ(XL)
+    .no-touch &:hover
+      .mxd-projects-archive__title
+        transform: translateX(0)
+      .mxd-projects-archive__image
+        flex-basis: 160px
+        border-radius: 6.2rem
+
+.mxd-projects-archive__border
+  position: relative
+  left: 1.5rem
+  width: calc( 100% - 3rem )
+  height: 2px
+  background-color: var(--st-bright)
+
+.mxd-projects-archive__inner
+  display: block
+  padding: 3rem 0
+  +MQ(XL)
+    overflow: hidden
+
+.mxd-projects-archive__title
+  display: flex
+  flex-direction: column-reverse
+  align-items: flex-start
+  gap: 3.5rem
+  margin-bottom: 3.4rem
+  p
+    font: normal var(--fw-medium) 2.6rem/1.4 var(--_font-accent)
+    letter-spacing: -0.06rem
+    color: var(--t-bright)
+  +MQ(M)
+    gap: 3.8rem
+    margin-bottom: 3.8rem
+    p
+      font-size: 3rem
+  +MQ(XL)
+    display: flex
+    flex-direction: row
+    align-items: center
+    gap: 3rem
+    height: 100%
+    margin-bottom: 0
+    max-width: 720px
+    transform: translateX(-50px)
+    transition: transform var(--_animspeed-slow) var(--_animbezier)
+    p
+      display: inline
+      width: 530px
+      span
+        +text-link-transparent-bright
+
+.mxd-projects-archive__image
+  display: block
+  border-radius: var(--_radius-m)
+  overflow: hidden
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+  +MQ(XL)
+    flex-basis: 20px
+    flex-grow: 0
+    flex-shrink: 0
+    height: 8.4rem
+    border-radius: 0
+    // opacity: 0
+    transition: border-radius 1.5s, flex-basis var(--_animspeed-medium) var(--_animbezier)
+
+.mxd-projects-archive__tagslist
+  margin-bottom: 0.6rem
+  ul
+    li
+      p
+        color: var(--t-bright)
+  +MQ(M)
+    margin-bottom: 1rem
+  +MQ(XL)
+    margin-bottom: 0
+
+// pagination
+.mxd-blog-pagination
+  position: relative
+  margin-top: 5rem
+  margin-bottom: 2.4rem
+  +MQ(XL)
+    margin-bottom: 0
+
+.mxd-blog-pagination__inner
+  position: relative
+
+.mxd-blog-pagination__items
+  position: relative
+  display: flex
+  align-items: center
+  justify-content: center
+  gap: 1rem
+  font: normal var(--fw-medium) 1.8rem/3.3rem var(--_font-accent)
+
+.blog-pagination-control
+  position: absolute
+  top: 0
+  .btn-caption
+    display: none !important
+  &.prev
+    left: 0
+  &.next
+    right: 0
+  +MQ(M)
+    .btn-caption
+      display: block !important
+
+.blog-pagination-number
+  position: relative
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 33px
+  height: 33px
+  font: normal var(--fw-regular) 1.8rem/3.3rem var(--_font-accent)
+  color: var(--t-bright)
+  &.active
+    font-size: 3rem
+    font-weight: var(--fw-semibold)
+
+// sidebar
+.mxd-sidebar
+  position: relative
+  display: flex
+  flex-direction: column
+  gap: 3rem
+
+.mxd-sidebar__widget
+  position: relative
+  display: flex
+  flex-direction: column
+  gap: 3rem
+  padding: 3rem
+  +MQ(M)
+    padding: 4rem
+
+.widget__title
+  p
+    font: normal var(--fw-medium) 3rem/1.2 var(--_font-accent)
+    color: var(--t-bright)
+  +MQ(M)
+    p
+      font-size: 3.6rem
+
+.widget__categories
+  display: flex
+  flex-direction: column
+  gap: 0.3rem
+
+.categories__item
+  display: flex
+
+.categories__link
+  font: normal var(--fw-regular) 2.2rem/1.6 var(--_font-accent)
+  color: var(--t-bright)
+  .no-touch &:hover
+    color: var(--t-medium)
+
+.widget__recent-posts
+  display: flex
+  flex-direction: column
+  gap: 3rem
+
+.recent-post__item
+  display: flex
+  gap: 2rem
+
+.recent-post__thumb
+  flex-basis: 120px
+  flex-grow: 0
+  flex-shrink: 0
+  height: 120px
+  border-radius: var(--_radius-s)
+  overflow: hidden
+  a
+    display: block
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+    filter: blur(0)
+    transform: scale(1)
+    transition: filter var(--_animspeed-medium), transform var(--_animspeed-medium) var(--_animbezier)
+  .no-touch &:hover
+    img
+      filter: blur(3px)
+      transform: scale(1.04)
+
+.recent-post__content
+  display: flex
+  flex-direction: column
+  gap: 1rem
+
+.recent-post__title
+  font: normal var(--fw-semibold) 1.8rem/1.4 var(--_font-accent)
+  color: var(--t-bright)
+  a
+    display: inline
+    color: var(--t-bright)
+    +text-link-transparent-bright
+
+.recent-post__meta
+  display: flex
+  flex-wrap: wrap
+  row-gap: 0.4rem
+  column-gap: 1rem
+  color: var(--t-bright)
+  span
+    display: flex
+    align-items: center
+    gap: 1rem
+    font: normal var(--fw-regular) 1.6rem/1.6 var(--_font-accent)
+    a
+      color: var(--t-bright)
+    svg
+      width: 1.3rem
+      height: 1.3rem
+      fill: currentColor
+    &.meta-tag
+      font-weight: var(--fw-regular)
+    &.meta-date
+    .no-touch &:hover
+      a
+        color: var(--t-medium)
+
+// socials links list
+.widget__social-links-small
+  position: relative
+
+.widget__social-links-small
+  @media (hover) and (prefers-reduced-motion: no-preference)
+    & > .social-links-small__item
+      transition: opacity .3s ease
+    &:hover > .social-links-small__item:not(:hover)
+      opacity: .2
+
+.social-links-small__item
+  position: relative
+  display: block
+  margin-top: -1px
+  &:first-of-type
+    margin-top: 0
+
+.social-links-small__divider
+  position: relative
+  width: 100%
+  height: 1px
+  background-color: var(--st-bright)
+
+.social-links-small__link
+  position: relative
+  display: flex
+  align-items: center
+  justify-content: space-between
+  padding: 1.5rem 0
+  overflow: hidden
+  .no-touch &:hover
+    .social-links-small__title
+      transform: translateX(1rem)
+    .social-links-small__icon
+      i
+        &::before
+          animation: 0.6s var(--_animbezier) 0s 1 both slideRightUp
+
+.social-links-small__title
+  position: relative
+  font: normal var(--fw-medium) 1.8rem/1.2 var(--_font-accent)
+  color: var(--t-bright)
+  transform: translateX(0)
+  transition: transform var(--_animspeed-medium), color var(--_animspeed-medium) var(--_animbezier)
+
+.social-links-small__icon
+  position: relative
+  display: flex
+  font-size: 1.8rem
+  transform: translateX(0) rotate(0deg)
+  transition: transform var(--_animspeed-medium) var(--_animbezier)
+  i
+    display: inline-flex
+    position: relative
+    overflow: hidden
+    color: var(--t-bright)
+    transition: color var(--_animspeed-medium) var(--_animbezier)
+
+// ads widget
+.widget-ad
+  position: relative
+  width: 100%
+  height: auto
+  padding: 0
+  overflow: hidden
+  +MQ(XL)
+    height: 460px
+
+.widget__bgimage
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+
+.widget__tags
+  display: flex
+  justify-content: flex-end
+  +position(absolute, 0 null null 0)
+  width: 100%
+  padding: 1rem
+
+
+
+
+

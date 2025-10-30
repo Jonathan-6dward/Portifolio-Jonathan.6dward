@@ -1,0 +1,549 @@
+// logo
+.mxd-logo
+  display: inline-flex
+  align-items: center
+  justify-content: left
+  
+  gap: 1rem
+  +MQ(M)
+    gap: 1.4rem
+
+.mxd-logo__image
+  display: block
+  width: 4.6rem
+  height: auto
+  +MQ(M)
+    width: 5.6rem
+
+.mxd-logo__text
+  font: normal var(--fw-medium) 1.9rem/1.1 var(--_font-accent)
+  letter-spacing: normal
+  color: var(--t-bright)
+  +MQ(M)
+    font-size: 2.4rem
+  
+// secondary title
+.mxd-section-title
+  display: flex
+  flex-direction: column
+  gap: 3.4rem
+  text-align: left
+  //background-color: pink
+  margin-bottom: 7rem
+  &.h2-only
+    margin-bottom: 6.2rem
+  &.no-controls
+    margin-bottom: 6rem
+  &.title-large
+    gap: 4.2rem
+  &.pre-grid
+    margin-bottom: 4rem
+  &.pre-block
+    margin-bottom: 4.4rem
+  &.no-margin
+    margin: 0
+  +MQ(M)
+    margin-bottom: 8rem
+    &.h2-only
+      margin-bottom: 6.6rem
+    &.no-controls
+      margin-bottom: 7rem
+    &.pre-grid
+      margin-bottom: 5rem
+  +MQ(XL)
+    margin-bottom: 6.7rem
+    &.no-controls
+      margin-bottom: 6.7rem
+    &.no-margin-desktop
+      margin-bottom: 0
+  +MQ(XL)
+    &.title-large
+      gap: 4rem
+  +MQ(XXXL)
+    gap: 4.2rem
+    margin-bottom: 6.7rem
+
+.mxd-section-title__text
+  display: flex
+  flex-direction: column
+  gap: 2.4rem
+  +MQ(XXXL)
+    gap: 2.6rem
+
+.mxd-section-title__controls
+  position: relative
+
+.mxd-section-title__image-link
+  display: flex
+  svg,
+  img
+    width: 140px
+    height: auto
+  +MQ(XXXL)
+    svg,
+    img
+      width: 160px
+
+.mxd-section-title__title
+  +MQ(XL)
+    &.card-split-title
+      margin-top: -1.6rem
+
+.mxd-section-title__descr
+  padding-right: 6rem
+  margin-top: 2.2rem
+  +MQ(M)
+    margin-top: 1.8rem
+    max-width: 620px
+  +MQ(XL)
+    margin-top: 2.8rem
+  +MQ(XXXL)
+    margin-top: 2.5rem
+
+.mxd-section-title__controls
+  display: flex
+  margin-top: 3.2rem
+  &.pre-title
+    margin-top: 3.2rem
+  +MQ(M)
+    &.pre-title
+      margin-top: 2.9rem
+  +MQ(XL)
+    justify-content: flex-start
+    margin-top: 4.2rem
+    &.pre-title
+      margin-top: 0
+  +MQ(XXXL)
+    margin-top: 4.2rem
+
+.mxd-section-title__hrtitle
+  +MQ(XL)
+    padding-right: 6rem
+    margin-bottom: 0
+
+.mxd-section-title__hrdescr
+  margin-top: 2.2rem
+  +MQ(M)
+    padding-right: 6rem
+    margin-top: 1.8rem
+  +MQ(XL)
+    margin-top: 0
+    padding-top: 0.7rem
+
+.mxd-section-title__hrcontrols
+  display: flex
+  margin-top: 3.2rem
+  &.pre-title
+    margin-top: 3.2rem
+  +MQ(M)
+    &.pre-title
+      margin-top: 2.9rem
+  +MQ(XL)
+    justify-content: flex-end
+    padding-top: 1.7rem
+    margin-top: 0
+    &.pre-title
+      margin-top: 0
+  +MQ(XXXL)
+    padding-top: 1.7rem
+
+.mxd-section-title__hrparagraph
+  +MQ(XL)
+    margin-top: 4rem
+  +MQ(XXXL)
+    margin-top: 5.3rem
+
+// contact data
+.mxd-data-list
+  position: relative
+
+.mxd-data-list__column
+  display: flex
+  flex-direction: column
+  gap: 2.8rem
+  margin-bottom: 2.8rem
+  &:last-of-type
+    margin-bottom: 0
+  +MQ(M)
+    margin-bottom: 0
+  +MQ(XL)
+    gap: 3.4rem
+
+.mxd-data-list__item
+  display: flex
+  flex-direction: column
+  gap: 0.6rem
+
+.mxd-data-list__name
+  font: normal var(--fw-regular) 1.8rem/1.2 var(--_font-accent)
+  color: var(--t-medium)
+
+.mxd-data-list__content
+  display: inline-flex
+  font: normal var(--fw-medium) 2.2rem/1.2 var(--_font-accent)
+  color: var(--t-bright)
+  a
+    +standalone-link-medium
+
+// clients avatars
+
+.mxd-avatars-group
+  position: relative
+  display: flex
+  gap: 2rem
+  +MQ(XL)
+    flex-direction: row
+    align-items: center
+    &.align-right
+      flex-direction: column
+      align-items: flex-end
+      justify-content: flex-end
+      text-align: right
+
+.mxd-avatars-group__text
+  display: flex
+  flex-direction: column
+  p, a
+    line-height: 1.2
+    color: var(--t-medium)
+    font-size: 1.8rem
+  +MQ(M)
+    p, a
+      font-size: 2.2rem
+
+.mxd-avatars
+  position: relative
+  display: flex
+  &.align-right
+    justify-content: flex-end
+    text-align: right
+
+.mxd-avatars__item
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 8rem
+  height: 8rem
+  border-radius: 50%
+  overflow: hidden
+  margin-left: -2.2rem
+  &:first-of-type
+    margin-left: 0
+  &.small
+    width: 4.6rem
+    height: 4.6rem
+    margin-left: -1.4rem
+    &:first-of-type
+      margin-left: 0
+  img
+    width: 100%
+    height: auto
+    object-fit: cover
+  +MQ(M)
+    &.small
+      width: 5.6rem
+      height: 5.6rem
+      margin-left: -1.6rem
+
+.mxd-avatars__icon
+  width: 4rem
+  height: auto
+  &.small
+    width: 3rem
+    height: auto
+
+// preview hover for all images
+.mxd-preview-hover
+  +position(absolute, 0 null null 0)
+  width: 100%
+  height: 100%
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  gap: 0.8rem
+  opacity: 0
+  transition: fbackdrop-filter var(--_animspeed-medium), opacity var(--_animspeed-medium) var(--_animbezier)
+
+.mxd-preview-hover__icon
+  display: block
+  width: 10rem
+  &.icon-small
+    width: 8rem
+  img
+    width: 100%
+    height: auto
+
+.mxd-preview-hover__text
+  font: normal var(--fw-medium) 3rem/1.2 var(--_font-accent)
+  color: var(--pt-t-light-bright)
+  
+// stats counter
+.mxd-counter
+  display: flex
+  flex-direction: column
+  gap: 3rem
+  &.small
+    gap: 2rem
+  &.horizontal
+    flex-direction: row
+    align-items: center
+    gap: 1.4rem
+  +MQ(M)
+    &.align-end
+      align-items: flex-end
+      text-align: right
+
+.mxd-counter__number
+
+.mxd-counter__descr
+  max-width: 250px
+
+.mxd-btngroup
+  display: flex
+  flex-direction: column
+  gap: 1rem
+  &.centered
+    justify-content: center
+  +MQ(S)
+    flex-direction: row
+    gap: 2rem
+
+// parallax dividers
+
+.mxd-divider
+  position: relative
+  border-radius: var(--_radius-l)
+  overflow: hidden
+  height: 460px
+  //background-color: green
+  +MQ(M)
+    height: 600px
+  +MQ(XL)
+    height: 760px
+    &.divider-hero-01
+      padding-top: 14rem
+  +MQ(XXXL)
+    height: 930px
+
+.mxd-divider__image
+  position: relative
+  width: 100%
+  height: 460px
+  background-repeat: no-repeat
+  background-position: center
+  background-size: cover
+  //background-color: red
+  overflow: hidden
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+  +MQ(M)
+    height: 600px
+  +MQ(XL)
+    height: 760px
+  +MQ(XXXL)
+    height: 930px
+
+.mxd-divider__video
+  position: relative
+  width: 100%
+  height: 460px
+  background-repeat: no-repeat
+  background-position: center
+  background-size: cover
+  overflow: hidden
+  video
+    display: block
+    +position(absolute, 0 null null 0)
+    width: 100%
+    height: 100%
+    background-color: transparent
+    background-position: center center
+    background-size: contain
+    object-fit: cover
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+  +MQ(M)
+    height: 600px
+  +MQ(XL)
+    height: 760px
+  +MQ(XXXL)
+    height: 930px
+
+.mxd-divider__trigger
+  position: absolute
+  +center
+
+// projects item
+.mxd-project-item
+
+.mxd-project-item__media
+  position: relative
+  display: block
+  margin-bottom: 1.4rem
+  height: 460px
+  +MQ(M)
+    height: 600px
+    margin-bottom: 2.3rem
+  +MQ(XL)
+    height: 760px
+  +MQ(XXXL)
+    height: 930px
+
+.mxd-project-item__preview
+  position: relative
+  width: 100%
+  height: 460px
+  border-radius: var(--_radius-l)
+  overflow: hidden
+  display: flex
+  flex-direction: column
+  justify-content: flex-end
+  background-repeat: no-repeat
+  background-position: center
+  background-size: cover
+  +MQ(M)
+    height: 600px
+  +MQ(XL)
+    height: 760px
+  +MQ(XXXL)
+    height: 930px
+
+.mxd-project-item__tags
+  +position(absolute, null null 0 0)
+  width: 100%
+  padding: 2.6rem 3rem
+  display: flex
+  flex-wrap: wrap
+  gap: 1rem
+  +MQ(M)
+    align-items: flex-start
+    padding: 4rem
+  +MQ(XXXL)
+    gap: 1.4rem
+
+.mxd-project-item__promo
+  padding: 0 3rem
+  +MQ(M)
+    padding:0 4rem
+
+.mxd-project-item__name
+  a
+    display: inline
+    font: normal var(--fw-regular) 2.2rem/1.4 var(--_font-accent)
+    color: var(--t-medium)
+    +text-link-transparent-bright
+    span
+      font-weight: var(--fw-medium)
+      color: var(--t-bright)
+  &.small
+    a
+      font-size: 2.2rem
+  +MQ(M)
+    a
+      font-size: 3rem
+    &.small
+      a
+        font-size: 2.2rem
+
+// links list
+.mxd-links-lines
+  position: relative
+
+.mxd-links-lines
+  @media (hover) and (prefers-reduced-motion: no-preference)
+    & > .mxd-links-lines__item
+      transition: opacity .3s ease
+    &:hover > .mxd-links-lines__item:not(:hover)
+      opacity: .2
+
+.mxd-links-lines__item
+  position: relative
+  display: block
+  margin-top: -2px
+  &:first-of-type
+    margin-top: 0
+
+.mxd-links-lines__divider
+  position: relative
+  width: 100%
+  height: 2px
+  background-color: var(--st-bright)
+
+.mxd-links-lines__link
+  position: relative
+  display: flex
+  align-items: center
+  justify-content: space-between
+  padding: 3rem 0
+  overflow: hidden
+  .no-touch &:hover
+    .mxd-links-lines__title
+      transform: translateX(1rem)
+    .mxd-links-lines__icon
+      i
+        &::before
+          animation: 0.6s var(--_animbezier) 0s 1 both slideRightUp
+
+.mxd-links-lines__title
+  position: relative
+  color: var(--t-bright)
+  transform: translateX(0)
+  transition: transform var(--_animspeed-medium), color var(--_animspeed-medium) var(--_animbezier)
+
+.mxd-links-lines__icon
+  position: relative
+  display: flex
+  font-size: 3rem
+  transform: translateX(0) rotate(0deg)
+  transition: transform var(--_animspeed-medium) var(--_animbezier)
+  i
+    display: inline-flex
+    position: relative
+    overflow: hidden
+    color: var(--t-bright)
+    transition: color var(--_animspeed-medium) var(--_animbezier)
+
+// simple check list
+.mxd-check-list
+  display: flex
+  flex-direction: column
+  gap: 0.4rem
+  li
+    display: flex
+    align-items: center
+    gap: 1.2rem
+    font: normal var(--fw-regular) 1.8rem/1.6 var(--_font-accent)
+    color: var(--t-medium)
+
+// floating image background
+.mxd-floating-img
+  +position(absolute, 0 null null 0)
+  width: 100%
+  height: 100vh
+  
+  &.floating-bg
+    overflow: hidden
+    z-index: -1
+  // background-color: red
+
+.mxd-floating-img__item
+  position: absolute
+  width: calc( 100% - 3rem )
+  height: auto
+  bottom: 20%
+  right: 1.5rem
+  +MQ(M)
+    bottom: 4rem
+    right: 6rem
+    width: 600px
+    height: auto
+  +MQ(XXL)
+    width: 46%
+  +MQ(XXXL)
+    right: 9rem
+    width: 40%

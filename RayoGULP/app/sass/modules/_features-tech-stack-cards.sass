@@ -1,0 +1,109 @@
+.mxd-tech-stack-cards
+  position: relative
+  &.grid-cards
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    grid-column-gap: 3rem
+    grid-row-gap: 3rem
+  +MQ(M)
+    &.grid-cards
+      grid-template-columns: repeat(3, 1fr)
+  +MQ(XXL)
+    &.grid-cards
+      grid-template-columns: repeat(4, 1fr)
+
+.mxd-tech-stack-cards__item
+  position: relative
+
+.mxd-tech-stack-cards__inner
+  position: relative
+  display: flex
+  align-items: center
+  gap: 2.6rem
+  width: 100%
+  height: 100%
+  padding: 3rem
+  &::before
+    content: ""
+    display: block
+    +position(absolute, 0 null null 0)
+    width: 100%
+    height: 100%
+    background-color: var(--base-tint)
+    border-radius: var(--_radius-m)
+    z-index: -1
+    transform: scale(1)
+    transition: transform var(--_animspeed-slow) var(--_animbezier)
+  .no-touch &:hover
+    &::before
+      transform: scale(1.04)
+
+.mxd-tech-stack-cards__inner-v2
+  position: relative
+  display: flex
+  flex-direction: column
+  align-items: center
+  gap: 1.6rem
+  width: 100%
+  height: 100%
+  padding: 3rem 1rem
+  &::before
+    content: ""
+    display: block
+    +position(absolute, 0 null null 0)
+    width: 100%
+    height: 100%
+    background-color: var(--base-tint)
+    border-radius: var(--_radius-m)
+    z-index: -1
+    transform: scale(1)
+    transition: transform var(--_animspeed-slow) var(--_animbezier)
+  .no-touch &:hover
+    &::before
+      transform: scale(1.04)
+  +MQ(M)
+    gap: 2.2rem
+    padding: 4rem 1rem
+
+.mxd-tech-stack-cards__inner-v3
+  position: relative
+  display: flex
+  flex-direction: column
+  align-items: center
+  gap: 1.6rem
+  width: 100%
+  height: 100%
+  padding: 3rem 4rem
+  background-color: var(--base-tint)
+  border-radius: var(--_radius-m)
+  +MQ(M)
+    gap: 2.2rem
+    padding: 4rem 6rem
+
+.mxd-tech-stack-cards__logo
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 8rem
+  height: 8rem
+  border-radius: var(--_radius-pt-m)
+  background-color: var(--accent)
+  color: var(--t-opp-bright)
+  svg,
+  img
+    display: block
+    width: 4.4rem
+    height: auto
+  svg
+    fill: currentColor
+
+.mxd-tech-stack-cards__title
+
+.mxd-tech-stack-cards__icon
+  position: relative
+  height: 7rem
+  img
+    width: auto
+    height: 100%
+  +MQ(M)
+    height: 9rem

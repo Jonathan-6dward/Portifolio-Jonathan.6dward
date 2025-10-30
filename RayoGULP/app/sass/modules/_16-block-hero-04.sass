@@ -1,0 +1,270 @@
+.mxd-hero-04
+  position: relative
+  width: 100%
+  max-width: 1920px
+  margin: 0 auto
+  padding-top: 14rem
+  +MQ(M)
+    padding-top: 16rem
+  +MQ(XL)
+    padding-top: 4rem
+  +MQ(XXXL)
+    padding-top: 4rem
+
+.mxd-page-bg
+  +position(absolute, 0 null null 0)
+  width: 100%
+  height: 100%
+
+.hero-04-bg
+  height: 300vh
+  overflow: hidden
+  +MQ(XL)
+    height: 200vh
+
+.hero-04-bg__obj-01,
+.hero-04-bg__obj-02
+  position: absolute
+  img
+    display: block
+    width: 100%
+    height: auto
+
+.hero-04-bg__obj-01
+  top: 680px
+  left: -50px
+  width: 240px
+  +MQ(M)
+    width: 340px
+  +MQ(XL)
+    top: 360px
+    width: 340px
+  +MQ(XXXL)
+    top: 400px
+    left: -90px
+    width: 460px
+
+.hero-04-bg__obj-02
+  top: 10px
+  right: -30px
+  width: 200px
+  +MQ(M)
+    top: 40px
+    right: -60px
+    width: 360px
+  +MQ(L)
+    top: 40px
+    right: -60px
+    width: 460px
+  +MQ(XL)
+    top: 410px
+    right: -60px
+    width: 460px
+  +MQ(XXXL)
+    top: 430px
+    right: -60px
+    width: 600px
+
+.mxd-hero-04__wrap
+  position: relative
+  width: 100%
+  padding: 0 1.5rem
+  +MQ(M)  
+    padding: 0 4.5rem
+  +MQ(XL)
+    height: 100%
+    // background-color: green
+  +MQ(XXXL)
+    padding: 0 7.5rem
+
+.mxd-hero-04__left
+  display: flex
+  flex-direction: column
+  gap: 3rem
+  +MQ(M)
+    flex-direction: row
+  +MQ(XL)
+    flex-direction: column
+  // background-color: pink
+
+.mxd-hero-04__right
+  // background-color: blue
+  display: flex
+  flex-direction: column
+  gap: 3.9rem
+  padding-bottom: 5.2rem
+  +MQ(M)
+    gap: 5.2rem
+    padding-bottom: 7.2rem
+  +MQ(XL)
+    padding-bottom: 0
+  +MQ(XXXL)
+    gap: 6.8rem
+
+.mxd-hero-04__imageblock
+  display: flex
+  flex-direction: column
+  gap: 4rem
+  padding: 3rem
+  border-radius: 3.6rem
+  background-color: rgba(var(--accent-rgb), 0.7)
+  border: 1px solid rgba(var(--accent-rgb), 0.8)
+  backdrop-filter: blur(6px)
+  p
+    font: normal var(--fw-medium) 2.5rem/1.2 var(--_font-accent)
+    color: var(--t-opp-bright)
+  +MQ(M)
+    padding: 4rem
+  +MQ(XXXL)
+    font-size: 3rem
+
+.hero-04-imageblock__btn
+  +position(absolute, 1rem 1rem null null)
+
+.mxd-hero-04__aboutblock
+  display: flex
+  flex-direction: column
+  gap: 4rem
+  padding: 3rem
+  border-radius: 3.6rem
+  background-color: rgba(var(--additional-rgb), 0.7)
+  border: 1px solid rgba(var(--additional-rgb), 0.9)
+  backdrop-filter: blur(6px)
+  p
+    font: normal var(--fw-medium) 1.8rem/1.6 var(--_font-accent)
+    color: var(--t-bright)
+  +MQ(M)
+    padding: 4rem
+  +MQ(XXXL)
+    p
+      font-size: 2.2rem
+
+.mxd-hero-04__headline
+  display: flex
+  flex-direction: column
+  gap: 3.5rem
+  +MQ(M)
+    gap: 3.8rem
+  +MQ(XL)
+    gap: 3.8rem
+  +MQ(XXXL)
+    gap: 4.8rem
+
+.mxd-hero-04__headline,
+.mxd-hero-04__descr
+  padding: 0
+  +MQ(XL)
+    padding: 0 3rem
+  +MQ(XXXL)
+    padding: 0 6rem
+
+.hero-04-title
+  position: relative
+  display: flex
+  flex-direction: column
+
+.hero-04-title__row
+  display: flex
+  justify-content: flex-start
+  align-items: center
+  // background-color: red
+  gap: 1rem
+  +MQ(M)
+    flex-direction: row
+    justify-content: flex-start
+    align-items: center
+    gap: 2rem
+  +MQ(XL)
+    gap: 3.2rem
+  +MQ(XXXL)
+    gap: 3.4rem
+
+.hero-04-title__item
+  display: inline-flex
+  // background-color: yellow
+  &.title-item-transparent
+    opacity: 0
+  &.title-item-image
+    padding-top: 1rem
+    display: none
+    svg
+      width: 3.5rem
+      height: 3.5rem
+      fill: currentColor
+  +MQ(M)
+    white-space: nowrap
+    &.title-item-transparent
+      // background-color: pink
+      padding: 0 5rem
+      border-radius: 4.4rem
+      color: var(--t-opp-bright)
+    &.title-item-image
+      display: inline-flex
+      padding-top: 1rem
+      svg
+        width: 7.5rem
+        height: 7.5rem
+  +MQ(XL)
+    &.title-item-transparent
+      padding: 0 7rem
+      border-radius: 6.6rem
+    &.title-item-image
+      svg
+        width: 7.5rem
+        height: 7.5rem
+  +MQ(XXXL)
+    &.title-item-transparent
+      border-radius: 7.7rem
+    &.title-item-image
+      svg
+        width: 8.2rem
+        height: 8.2rem
+
+.hero-04-headline__avatars
+
+.mxd-hero-04__descr
+
+.hero-04-marquee
+  position: relative
+  width: 100%
+  height: 4.6rem
+  line-height: 4.6rem
+  border-radius: 2.3rem
+  border: 1px solid var(--st-opp-bright)
+  background-color: var(--neutral-transparent)
+  backdrop-filter: blur(6px)
+  color: var(--t-bright)
+  p
+    font: normal var(--fw-medium) 1.8rem/4.6rem var(--_font-accent)
+    color: var(--t-bright)
+  svg
+    width: 1.7rem
+    height: 1.7rem
+    fill: currentColor
+  +MQ(M)
+    height: 5.6rem
+    border-radius: 2.8rem
+    p
+      font-size: 2.2rem
+      line-height: 5.6rem
+    svg
+      width: 1.9rem
+      height: 1.9rem
+
+.hero-04-marquee
+  .marquee-flex
+    display: flex
+    align-items: center
+    gap: 1rem
+  .marquee__item
+    &.item-regular
+      display: flex
+      align-items: center
+      gap: 1rem
+      margin: 0
+  +MQ(M)
+    .marquee-flex
+      gap: 1.4rem
+    .marquee__item
+      &.item-regular
+        gap: 1.4rem

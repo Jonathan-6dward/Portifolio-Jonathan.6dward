@@ -1,0 +1,62 @@
+.projects-stack
+  width: 100%
+  position: relative
+  height: 75vh
+  min-height: 600px
+  //height: 460px
+  +MQ(L)
+    height: 600px
+    min-height: 0
+  +MQ(XXXL)
+    height: 760px
+
+.mxd-projects-stack__inner
+  position: relative
+  display: flex
+  flex-direction: column
+  overflow: hidden
+  width: 100%
+  height: 100%
+  border-radius: var(--_radius-l)
+  padding: 3rem
+  z-index: 0
+  &.justify-between
+    justify-content: space-between
+  &.justify-end
+    justify-content: flex-end
+  +MQ(M)
+    padding: 5rem
+
+.mxd-projects-stack__image
+  +position(absolute, 0 null null 0)
+  width: 100%
+  height: 100%
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+    &.mobile
+      display: block
+    &.desktop
+      display: none
+  +MQ(M)
+    img
+      &.mobile
+        display: none
+      &.desktop
+        display: block
+
+.mxd-projects-stack__title
+  position: relative
+  margin-bottom: 2.4rem
+  max-width: 600px
+  &.no-margin
+    margin-bottom: 0
+
+.mxd-projects-stack__tags
+  position: relative
+  display: flex
+  flex-wrap: wrap
+  gap: 1rem
+  +MQ(XXXL)
+    gap: 1.4rem

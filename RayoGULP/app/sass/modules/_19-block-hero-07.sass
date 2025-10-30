@@ -1,0 +1,235 @@
+.mxd-hero-07
+  position: relative
+  width: 100%
+
+.mxd-hero-07__tl-trigger
+  +position(absolute, null 0 0 null)
+  width: 1px
+  height: 1px
+  // background-color: red
+
+.hero-07-fade-out-scroll
+  transform-origin: top center
+
+.hero-07-slide-out-scroll
+  transform-origin: top center
+
+.mxd-hero-07__wrap
+  position: relative
+  width: 100%
+  padding-top: 7.6rem
+  // background-color: green
+  +MQ(M)
+    padding-top: 9.6rem
+  +MQ(XL)
+    height: 100vh
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-items: center
+    padding-top: 9.6rem
+
+.mxd-hero-07__top
+  position: relative
+  width: 100%
+  padding-top: 3.1rem
+  margin-bottom: 4.6rem
+  overflow: hidden
+  +MQ(M)
+    padding-top: 10.3rem
+    margin-bottom: 13.3rem
+  +MQ(XL)
+    padding-top: 2.3rem
+    margin-bottom: 0
+  +MQ(XXXL)
+    padding-top: 4.3rem
+    // background-color: red
+
+.mxd-hero-07__title
+  +position(absolute, 0 null null 0)
+  width: 100%
+  white-space: nowrap
+  opacity: 0
+  visibility: hidden
+  // background-color: rgba(0, 0, 0, 0.6)
+
+.mxd-hero-07__marquee
+
+.mxd-hero-07__bottom
+  position: relative
+  width: 100%
+  padding: 0 3rem
+  overflow: hidden
+  +MQ(M)
+    padding: 0 6rem
+  +MQ(XL)
+    flex: 1
+    overflow: visible
+    // background-color: yellow
+  +MQ(XXXL)
+    padding: 0 9rem
+
+.mxd-hero-07__circle
+  position: relative
+  width: 100%
+  height: 460px
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  padding: 1.5rem
+  margin-bottom: 4.6rem
+  +MQ(M)
+    width: 600px
+    height: 600px
+    justify-content: flex-start
+    margin: 0 auto 4.6rem
+    padding: 0
+    overflow: visible
+  +MQ(XL)
+    position: absolute
+    bottom: -250px
+    +center(x)
+    margin: 0
+  +MQ(XXL)
+    width: 680px
+    height: 680px
+    bottom: -250px
+  +MQ(XXXL)
+    width: 900px
+    height: 900px
+    bottom: -400px
+
+.hero-07-circle__image
+  +position(absolute, 0 null null 0)
+  width: 100%
+  height: 100%
+  border-radius: var(--_radius-m)
+  overflow: hidden
+  img
+    display: block
+    width: 100%
+    height: 100%
+    object-fit: cover
+  +MQ(M)
+    border-radius: 50%
+
+.hero-07-circle__container
+  position: relative
+  display: flex
+  align-items: flex-start
+  &.mobile-row
+    display: flex
+    align-items: flex-end
+    gap: 1rem
+  +MQ(M)
+    position: static
+    // background-color: pink
+
+.hero-07-circle__item
+  padding: 1.8rem 2rem
+  border-radius: var(--_radius-pt-m)
+  background-color: var(--neutral-transparent)
+  border: 1px solid var(--neutral-transparent)
+  backdrop-filter: blur(16px)
+  box-shadow: 0px 4px 8px 0px rgba(var(--pt-purple-rgb), 0.3)
+  +MQ(M)
+    position: absolute
+    &.item-01
+      top: 3rem
+      right: -1.4rem
+      max-width: 20rem
+    &.item-02
+      top: 25rem
+      right: -10rem
+      max-width: 16rem
+    &.item-03
+      top: 20rem
+      left: -8rem
+      max-width: 16rem
+  +MQ(XL)
+    &.item-02
+      top: auto
+      top: 21rem
+      right: -10rem
+      max-width: 16rem
+    &.item-03
+      top: 17rem
+      left: -8rem
+      max-width: 16rem
+  +MQ(XXXL)
+    &.item-01
+      top: 5rem
+      right: 5rem
+      max-width: 20rem
+    &.item-02
+      top: auto
+      top: 29rem
+      right: -10rem
+      max-width: 16rem
+    &.item-03
+      top: 24rem
+      left: -7rem
+      max-width: 16rem
+
+.mxd-hero-07__info
+  display: flex
+  flex-direction: column
+  gap: 1rem
+  +MQ(XL)
+    flex-direction: row
+    justify-content: space-between
+    height: 100%
+    padding-top: 4rem
+    // background-color: red
+  +MQ(XXXL)
+    padding-top: 5.6rem
+
+.hero-07-info__container
+  display: flex
+  flex-direction: column
+  gap: 5.2rem
+  // background-color: pink
+  +MQ(XL)
+    justify-content: space-between
+    padding-bottom: 4rem
+    &:nth-of-type(2)
+      padding-top: 1.3rem
+  +MQ(XXXL)
+    &:nth-of-type(2)
+      padding-top: 1.7rem
+
+.hero-07-info__descr
+  position: relative
+  text-align: left
+  +MQ(M)
+    max-width: 500px
+    text-align: center
+    margin: 0 auto
+  +MQ(XL)
+    max-width: 340px
+    text-align: left
+    margin: 0
+  +MQ(XXXL)
+    max-width: 400px
+
+.hero-07-info__tags
+  display: flex
+  justify-content: flex-start
+  flex-wrap: wrap
+  gap: 1rem
+  +MQ(M)
+    justify-content: center
+  +MQ(XL)
+    flex-direction: column
+    align-items: flex-start
+    &.right-align-desktop
+      align-items: flex-end
+
+.mxd-hero-07__more
+  display: none
+  +MQ(XL)
+    display: block
+    +position(absolute, null 0 0 null)
+    padding: 4rem 6rem
+  +MQ(XXXL)
+    padding: 4rem 9rem
