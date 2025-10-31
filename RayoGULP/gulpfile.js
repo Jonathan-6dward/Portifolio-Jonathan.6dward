@@ -53,7 +53,7 @@ function cssmin() {
     grid: true
   }))
   .pipe(cleanCSS())
-  .pipe(dest('dist/source-files/rayo-css-min-files/'))
+  .pipe(dest('docs/source-files/rayo-css-min-files/'))
 }
 
 // expanded CSS compilation to source-files folder
@@ -71,13 +71,13 @@ function cssexp() {
     ],
     grid: true
   }))
-  .pipe(dest('dist/source-files/rayo-css-files/'))
+  .pipe(dest('docs/source-files/rayo-css-files/'))
 }
 
 // HTML build
 function html() {
   return src('app/*.html')
-  .pipe(dest('dist/'))
+  .pipe(dest('docs/'))
 }
 
 // JS libs for template minification
@@ -137,12 +137,12 @@ function libsexp() {
     'node_modules/masonry-layout/dist/masonry.pkgd.js'
   ])
   .pipe(concat('libs.js'))
-  .pipe(dest('dist/source-files/rayo-js-files/'))
+  .pipe(dest('docs/source-files/rayo-js-files/'))
 }
 
-// clean dist folder
-function cleandist() {
-  return del(['dist/**'])
+// clean docs folder
+function cleandocs() {
+  return del(['docs/**'])
 }
 
 // files copy to dist
@@ -157,7 +157,7 @@ function buildcopy() {
     'app/.htaccess',
     'app/mail.php'
   ], { base: 'app', encoding: false })
-  .pipe(dest('dist'))
+  .pipe(dest('docs'))
 }
 
 // app.js copy to dist
@@ -165,7 +165,7 @@ function buildalljs() {
   return src([
     'app/js/app.js'
   ])
-  .pipe(dest('dist/source-files/rayo-js-files/'))
+  .pipe(dest('docs/source-files/rayo-js-files/'))
 }
 
 // files watch
@@ -191,7 +191,7 @@ exports.html          = html;
 exports.clearcache    = clearcache;
 
 // build function
-exports.build         = series(cleandist, styles, cssmin, cssexp, html, libs, libsexp, buildcopy, buildalljs);
+exports.build         = series(cleandocs, styles, cssmin, cssexp, html, libs, libsexp, buildcopy, buildalljs);
 
 // default function (gulp)
 exports.default       = parallel(styles, libs, browsersync, startwatch);
